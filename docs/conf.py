@@ -20,10 +20,10 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'sphinx-hoverxref'
+project = 'Develop with Moreh Documentation'
 year = datetime.datetime.now().year
-copyright = f'{year}, Manuel Kaufmann'
-author = 'Manuel Kaufmann'
+copyright = f'{year}, johyun an'
+author = 'johyun an'
 
 # The short X.Y version
 version = ''
@@ -129,7 +129,11 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}
 
 # The master toctree document.
 master_doc = 'index'
