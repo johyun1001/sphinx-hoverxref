@@ -82,7 +82,13 @@ Badges:
     |Build| |PyPI version| |Docs badge| |License|
 
 
+.. toctree::
+   :maxdepth: 2
+   :caption: About MoAI:
 
+   About/about.md
+
+   
 .. toctree::
    :maxdepth: 2
    :caption: Contents
