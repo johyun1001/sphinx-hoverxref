@@ -124,3 +124,8 @@ wrapt==1.14.1
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
+myst-parser==0.18.0
+    # via
+    #   -r requirements.in
+    #   sphinxcontrib-opendataservices
+    #   sphinxcontrib-opendataservices-jsonschema
