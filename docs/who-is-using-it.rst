@@ -10,10 +10,6 @@ Setuptools
 |:books:| Repository
    https://github.com/pypa/setuptools/
 
-|:art:| Demo
-   .. image:: setuptools-usage.gif
-      :align: center
-      :width: 100%
 
 
 disnake
@@ -22,10 +18,6 @@ disnake
 |:books:| Repository
    https://github.com/DisnakeDev/disnake/
 
-|:art:| Demo
-   .. image:: disnake-usage.gif
-      :align: center
-      :width: 100%
 
 
 returns
@@ -34,10 +26,7 @@ returns
 |:books:| Repository
    https://github.com/dry-python/returns
 
-|:art:| Demo
-   .. image:: returns-usage.gif
-      :align: center
-      :width: 100%
+
 
 
 scrapy
@@ -46,10 +35,7 @@ scrapy
 |:books:| Repository
    https://github.com/scrapy/scrapy/
 
-|:art:| Demo
-   .. image:: scrapy-usage.gif
-      :align: center
-      :width: 100%
+
 
 
 tweepy
@@ -58,10 +44,7 @@ tweepy
 |:books:| Repository
    https://github.com/tweepy/tweepy/
 
-|:art:| Demo
-   .. image:: tweepy-usage.gif
-      :align: center
-      :width: 100%
+
 
 
 
@@ -71,10 +54,7 @@ hypothesis
 |:books:| Repository
    https://github.com/HypothesisWorks/hypothesis
 
-|:art:| Demo
-   .. image:: hypothesis-usage.gif
-      :align: center
-      :width: 100%
+
 
 
 crest
@@ -83,7 +63,4 @@ crest
 |:books:| Repository
    https://github.com/wave-harmonic/crest
 
-|:art:| Demo
-   .. image:: crest-usage.gif
-      :align: center
-      :width: 100%
+
