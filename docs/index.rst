@@ -85,6 +85,7 @@ Badges:
    :maxdepth: 2
    :caption: Contents
 
+   about.md
    installation
    usage
    configuration
