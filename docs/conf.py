@@ -20,10 +20,10 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'sphinx-hoverxref'
+project = 'Develop with Moreh Docs'
 year = datetime.datetime.now().year
-copyright = f'{year}, Manuel Kaufmann'
-author = 'Manuel Kaufmann'
+copyright = f'{year}, JH'
+author = 'JH'
 
 # The short X.Y version
 version = ''
