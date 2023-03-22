@@ -84,13 +84,13 @@ Badges:
    :maxdepth: 2
    :caption: About
 
-   about.md
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents
 
-   about.md
+
    installation
    usage
    configuration
@@ -103,7 +103,7 @@ Badges:
    :maxdepth: 2
    :caption: API Reference
 
-   autoapi/hoverxref/index
+
 
 
 .. _Read the Docs: https://readthedocs.org
