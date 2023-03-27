@@ -14,12 +14,10 @@ for more information read https://sphinx-multiproject.readthedocs.io/.
 import os
 import sys
 
-from multiproject.utils import get_project
 
 sys.path.append(os.path.abspath("_ext"))
 extensions = [
     "hoverxref.extension",
-    "multiproject",
     "myst_parser",
     "notfound.extension",
     "sphinx_design",
@@ -36,22 +34,7 @@ extensions = [
     "sphinxext.opengraph",
 ]
 
-multiproject_projects = {
-    "user": {
-        "use_config_file": False,
-        "config": {
-            "project": "Read the Docs user documentation",
-        },
-    },
-    "dev": {
-        "use_config_file": False,
-        "config": {
-            "project": "Read the Docs developer documentation",
-        },
-    },
-}
 
-docset = get_project(multiproject_projects)
 
 ogp_site_name = "Read the Docs Documentation"
 ogp_use_first_image = True  # https://github.com/readthedocs/blog/pull/118
@@ -140,13 +123,11 @@ man_pages = [
 
 language = "en"
 
-locale_dirs = [
-    f"{docset}/locale/",
-]
+
 gettext_compact = False
 
 html_theme = "sphinx_rtd_theme"
-html_static_path = ["_static", f"{docset}/_static"]
+html_static_path = ["_static"]
 html_css_files = ["css/custom.css", "css/sphinx_prompt_css.css"]
 html_js_files = ["js/expand_tabs.js"]
 
@@ -162,7 +143,6 @@ html_context = {
     # Fix the "edit on" links.
     # TODO: remove once we support different rtd config
     # files per project.
-    "conf_py_path": f"/docs/{docset}/",
     # Use to generate the Plausible "data-domain" attribute from the template
     "plausible_domain": f"{os.environ.get('READTHEDOCS_PROJECT')}.readthedocs.io",
 }
