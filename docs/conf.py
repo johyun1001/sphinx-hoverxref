@@ -46,7 +46,6 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx_tabs.tabs',
     'sphinx-prompt',
-    'autoapi.extension',
     'hoverxref.extension',
     'versionwarning.extension',
     'notfound.extension',
@@ -78,12 +77,22 @@ hoverxref_intersphinx_types = {
 
 
 hoverxref_role_types = {
-    'hoverxref': 'tooltip',
-    'ref': 'modal',
-    'confval': 'tooltip',
-    'mod': 'modal',
-    'class': 'modal',
-    'obj': 'tooltip',
+
+    'hoverxref': 'modal',
+    'ref': 'modal',  # for hoverxref_auto_ref config
+    'confval': 'tooltip',  # for custom object
+    'mod': 'tooltip',  # for Python Sphinx Domain
+    'class': 'tooltip',  # for Python Sphinx Domain
+    
+
+#    'hoverxref': 'tooltip',
+#  'ref': 'modal',
+#    'confval': 'tooltip',
+#   'mod': 'modal',
+#   'class': 'modal',
+#  'obj': 'tooltip',
+
+
 }
 hoverxref_domains = [
     'py',
