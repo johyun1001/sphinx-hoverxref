@@ -43,7 +43,6 @@ release = ''
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosectionlabel',
-    'sphinx.ext.mathjax',
     'sphinx_tabs.tabs',
     'sphinx-prompt',
     'hoverxref.extension',
@@ -92,14 +91,12 @@ hoverxref_role_types = {
 #   'class': 'modal',
 #  'obj': 'tooltip',
 
-
 }
 hoverxref_domains = [
     'py',
     'cite',
 ]
 hoverxref_sphinxtabs = True
-hoverxref_mathjax = True
 hoverxref_auto_ref = True
 
 # Add any paths that contain templates here, relative to this directory.
