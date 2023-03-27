@@ -27,7 +27,7 @@ extensions = [
     "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinxemoji.sphinxemoji",
-    "sphinxext.opengraph",
+
 ]
 
 
