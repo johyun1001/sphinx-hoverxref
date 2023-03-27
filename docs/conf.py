@@ -26,7 +26,6 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
-    "sphinxcontrib.httpdomain",
     "sphinxcontrib.video",
     "sphinxemoji.sphinxemoji",
     "sphinxext.opengraph",
