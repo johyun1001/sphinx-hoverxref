@@ -20,7 +20,6 @@ extensions = [
     "hoverxref.extension",
     "myst_parser",
     "notfound.extension",
-    "sphinx_design",
     "sphinx_search.extension",
     "sphinx_tabs.tabs",
     "sphinx-prompt",
