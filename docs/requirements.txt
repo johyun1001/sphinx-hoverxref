@@ -123,3 +123,4 @@ urllib3==1.26.15
     # via requests
 wrapt==1.15.0
     # via astroid
+myst-parser==0.18.0
