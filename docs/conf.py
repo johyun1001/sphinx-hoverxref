@@ -75,32 +75,7 @@ hoverxref_intersphinx_types = {
     'sphinx': 'tooltip',
 }
 
-# Used when building the documentation from the terminal and using a local Read
-# the Docs instance as backend
-hoverxref_api_host = 'http://localhost:8000'
 
-if os.environ.get('READTHEDOCS') == 'True':
-    # Building on Read the Docs
-    hoverxref_api_host = 'https://readthedocs.org'
-
-    if os.environ.get('PROXIED_API_ENDPOINT') == 'True':
-        # Use the proxied API endpoint
-        hoverxref_api_host = '/_'
-
-if os.environ.get('LOCAL_READTHEDOCS') == 'True':
-    # Building on a local Read the Docs instance
-    hoverxref_api_host = 'http://community.dev.readthedocs.io'
-
-if os.environ.get('NGROK_READTHEDOCS') == 'True':
-    # Building on a local Read the Docs instance using NGROK for HTTPS
-    hoverxref_api_host = 'https://readthedocs.ngrok.io'
-
-hoverxref_tooltip_maxwidth = 650
-hoverxref_auto_ref = True
-hoverxref_roles = [
-    'confval',
-    'term',
-]
 
 hoverxref_role_types = {
     'hoverxref': 'tooltip',
@@ -116,11 +91,7 @@ hoverxref_domains = [
 ]
 hoverxref_sphinxtabs = True
 hoverxref_mathjax = True
-
-autosectionlabel_prefix_document = True
-
-autoapi_dirs = ['../hoverxref']
-autoapi_add_toctree_entry = False
+hoverxref_auto_ref = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
