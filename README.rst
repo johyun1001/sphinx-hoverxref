@@ -1,65 +1,82 @@
-|Build| |PyPI version| |Docs badge| |License|
+Welcome to Read the Docs
+========================
 
-sphinx-hoverxref
-================
+|build-status| |docs| |coverage|
 
-``sphinx-hoverxref`` is a Sphinx_ extension to add tooltips on the cross references of the documentation with the content of the linked section.
-
-
-Example
+Purpose
 -------
 
-.. image:: docs/sphinx-hoverxref-example.png
+`Read the Docs`_ hosts documentation for the open source community. It supports
+Sphinx_ docs written with reStructuredText_, and can pull from your Subversion_,
+Bazaar_, Git_, and Mercurial_ repositories.
+Then we build documentation and host it for you.
+Think of it as *Continuous Documentation*.
 
+.. _Read the docs: https://readthedocs.org/
+.. _Sphinx: http://www.sphinx-doc.org/
+.. _reStructuredText: http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+.. _Subversion: http://subversion.tigris.org/
+.. _Bazaar: http://bazaar.canonical.com/
+.. _Git: http://git-scm.com/
+.. _Mercurial: https://www.mercurial-scm.org/
 
-Installation
+Documentation for RTD
+---------------------
+
+You will find complete documentation for setting up your project at `the Read
+the Docs site`_.
+
+.. _the Read the Docs site: https://docs.readthedocs.io/
+
+Get in touch
 ------------
 
-You can install sphinx-hoverxref from PyPI:
+You can find information about getting in touch with Read the Docs at our `Contribution page <https://docs.readthedocs.io/en/latest/contribute.html#get-in-touch>`_.
 
-::
+Contributing
+------------
 
-   pip install sphinx-hoverxref
+You can find information about contributing to Read the Docs at our `Contribution page <https://docs.readthedocs.io/en/latest/contribute.html>`_.
 
-Or, alternatively, install it from GitHub directly (requires git):
+Quickstart for GitHub-Hosted Projects
+-------------------------------------
 
-::
+By the end of this quickstart, you will have a new project automatically updated
+when you push to GitHub.
 
-   pip install git+https://github.com/readthedocs/sphinx-hoverxref
+#. Create an account on `Read the Docs`_.  You will get an email verifying your
+   email address which you should accept within 7 days.
 
+#. Log in and click on "Import a Project".
 
-Configuration
--------------
+#. Click "Connect to GitHub" in order to connect your account's repositories to GitHub.
 
-Add this extension in your ``conf.py`` file as:
+#. When prompted on GitHub, give access to your account.
 
-.. code-block:: python
+#. Click "Import a Repository" and select any desired repository.
 
-   extensions = [
-    # ... other extensions here
+#. Change any information if desired and click "Next".
 
-    'hoverxref.extension',
-   ]
-
-
-Documentation
--------------
-
-Check out the full documentation at https://sphinx-hoverxref.readthedocs.io/
+#. All done.  Commit away and your project will auto-update.
 
 
-.. _Sphinx: https://www.sphinx-doc.org/
+.. |build-status| image:: https://circleci.com/gh/readthedocs/readthedocs.org.svg?style=svg
+    :alt: build status
+    :target: https://circleci.com/gh/readthedocs/readthedocs.org
 
+.. |docs| image:: https://readthedocs.org/projects/docs/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: https://docs.readthedocs.io/en/latest/?badge=latest
 
-.. |Build| image:: https://travis-ci.org/readthedocs/sphinx-hoverxref.svg?branch=master
-   :target: https://travis-ci.org/readthedocs/sphinx-hoverxref
-   :alt: Build status
-.. |PyPI version| image:: https://img.shields.io/pypi/v/sphinx-hoverxref.svg
-   :target: https://pypi.org/project/sphinx-hoverxref
-   :alt: Current PyPI version
-.. |Docs badge| image:: https://readthedocs.org/projects/sphinx-hoverxref/badge/?version=latest
-   :target: https://sphinx-hoverxref.readthedocs.io/en/latest/?badge=latest
-   :alt: Documentation status
-.. |License| image:: https://img.shields.io/github/license/readthedocs/sphinx-hoverxref.svg
-   :target: LICENSE
-   :alt: Repository license
+.. |coverage| image:: https://codecov.io/gh/readthedocs/readthedocs.org/branch/main/graph/badge.svg
+    :alt: Test coverage
+    :scale: 100%
+    :target: https://codecov.io/gh/readthedocs/readthedocs.org
+
+License
+-------
+
+`MIT`_ © 2010 Read the Docs, Inc. & contributors
+
+.. _MIT: LICENSE
