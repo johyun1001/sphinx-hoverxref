@@ -22,7 +22,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    "spinx_tabs.tabs",
+    "sphinx_tabs.tabs",
     "myst_parser",
 ]
 templates_path = ["_templates"]
@@ -57,7 +57,6 @@ myst_heading_anchors = 3
 #
 # -- Options for HTML output -------------------------------------------------
 #
-
 
 
 
