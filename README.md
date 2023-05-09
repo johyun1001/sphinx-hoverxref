@@ -1,40 +1,191 @@
-# Sphinx Inline Tabs
+# sphinx-tabs
 
-![demo image](https://raw.githubusercontent.com/pradyunsg/sphinx-inline-tabs/main/docs/_static/demo.png)
+[![Github-CI][github-ci]][github-link]
+[![Coverage Status][codecov-badge]][codecov-link]
+[![PyPI][pypi-badge]][pypi-link]
 
-<!-- start-include-here -->
+Create tabbed content in [Sphinx documentation](http://www.sphinx-doc.org) when building HTML.
 
-Add inline tabbed content to your Sphinx documentation.
+For example, see the [Raw] code of [docs/index.rst](docs/index.rst) which generates the following:
+
+A live demo can be found here: <https://sphinx-tabs.readthedocs.io>
+
+![Tabs](/images/tabs.gif)
 
 ## Installation
 
-This project is available on PyPI, and can be installed using pip:
-
-```
-pip install sphinx-inline-tabs
+```bash
+pip install sphinx-tabs
 ```
 
-You'll also want to add the extension to `extensions` in `conf.py`:
+To enable the extension in Sphinx, add the following to your conf.py:
 
 ```python
-extensions = [
-    ...,
-    "sphinx_inline_tabs",
-    ...,
-]
+extensions = ['sphinx_tabs.tabs']
 ```
 
-## Features
+If needed, there is a configuration option to allow additional builders to be considered compatible. For example, to add the `linkcheck` builder, add the following to your conf.py:
 
-- **Elegant design**: Small footprint in the markup and generated website, while looking good.
-- **Configurable**: All the colors can be configured using CSS variables.
-- **Synchronisation**: Tabs with the same label all switch with a single click.
-- **Works without JavaScript**: JavaScript is not required for the basics, only for synchronisation.
+```python
+sphinx_tabs_valid_builders = ['linkcheck']
+```
 
-<!-- end-include-here -->
+If you are using [Read The Docs](https://readthedocs.org/) for building your documentation, the extension must be added as a requirement. Please add the following to `requirements.txt` at the root of the project:
+
+```
+sphinx-tabs
+```
 
 ## Contributing
 
-sphinx-inline-tabs is a volunteer maintained open source project, and we welcome contributions of all forms.
+We welcome all contributions!
+See the [EBP Contributing Guide](https://executablebooks.org/en/latest/contributing.html) for general details.
 
-The [Code of Conduct](CODE_OF_CONDUCT.md) applies within all community spaces. If you are not familiar with our Code of Conduct policy, take a minute to read the policy before starting with your first contribution.
+The simplest way to run tests is to install [pre-commit](https://pre-commit.com/) for linting and [tox](https://tox.readthedocs.io) for unit tests and documentation build:
+
+```console
+$ pre-commit run --all
+```
+
+```console
+$ tox -p
+```
+
+## Basic Tabs
+
+Basic tabs can be coded as follows:
+
+```rst
+.. tabs::
+
+   .. tab:: Apples
+
+      Apples are green, or sometimes red.
+
+   .. tab:: Pears
+
+      Pears are green.
+
+   .. tab:: Oranges
+
+      Oranges are orange.
+```
+
+![Tabs](/images/tabs.gif)
+
+The contents of each tab can be displayed by clicking on the tab that you wish to show. Clicking on the tab that is currently open will hide the tab's content, leaving only the tab set labels visible.
+
+Alternatively, tab sets can be focused using :kbd:`Tab`. The :kbd:`Left Arrow` and :kbd:`Right Arrow` keys can then be used to navigate across the tab set and :kbd:`Enter` can be used to select a tab.
+
+## Grouped Tabs
+
+Tabs can be grouped, so that changing the current tab in one tabset changes the current tab in all other tabsets containing a tab with a matching label.
+For example:
+
+```rst
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Linux Line 1
+
+   .. group-tab:: Mac OSX
+
+      Mac OSX Line 1
+
+   .. group-tab:: Windows
+
+      Windows Line 1
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Linux Line 1
+
+   .. group-tab:: Mac OSX
+
+      Mac OSX Line 1
+
+   .. group-tab:: Windows
+
+      Windows Line 1
+```
+
+![Group Tabs](/images/groupTabs.gif)
+
+If permitted by the user's browser, the last selected group tab will be remembered when changing page. As such, if any tabsets on the next page contain a tab with the same label it will be selected.
+
+
+## Code Tabs
+
+Grouped tabs containing code with syntax highlighting can be created as follows:
+
+```rst
+.. tabs::
+
+   .. code-tab:: c
+
+         int main(const int argc, const char **argv) {
+           return 0;
+         }
+
+   .. code-tab:: c++
+
+         int main(const int argc, const char **argv) {
+           return 0;
+         }
+
+   .. code-tab:: py
+
+         def main():
+             return
+
+   .. code-tab:: java
+
+         class Main {
+             public static void main(String[] args) {
+             }
+         }
+
+   .. code-tab:: julia
+
+         function main()
+         end
+
+   .. code-tab:: fortran
+
+         PROGRAM main
+         END PROGRAM main
+```
+
+![Code Tabs](/images/codeTabs.gif)
+
+Code tabs also support custom lexers (added via sphinx `conf.py`). Pass the lexers alias as the first argument of `code-tab`.
+
+By default, code tabs are labelled with the language name, though a custom label can be provided as an optional second argument to the `code-tabs` directive:
+
+```rst
+.. tabs::
+
+   .. code-tab:: c I love C
+
+         int main(const int argc, const char **argv) {
+           return 0;
+         }
+
+   .. code-tab:: py I love Python more
+
+         def main():
+             return
+
+```
+
+The tab label is used to group tabs, including `code-tabs`. As such, the same custom label should be used to group related tabs.
+
+[github-ci]: https://github.com/executablebooks/sphinx-tabs/workflows/continuous-integration/badge.svg?branch=master
+[github-link]: https://github.com/executablebooks/sphinx-tabs
+[pypi-badge]: https://img.shields.io/pypi/v/sphinx-tabs.svg
+[pypi-link]: https://pypi.org/project/sphinx-tabs
+[codecov-badge]: https://codecov.io/gh/executablebooks/sphinx-tabs/branch/master/graph/badge.svg
+[codecov-link]: https://codecov.io/gh/executablebooks/sphinx-tabs
