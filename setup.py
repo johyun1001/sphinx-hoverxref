@@ -1,62 +1,52 @@
-from os import path
-import re
-from setuptools import setup
+from pathlib import Path
+from setuptools import setup, find_packages
 
+version = [
+    line
+    for line in Path("sphinx_panels/__init__.py").read_text().split("\n")
+    if "__version__" in line
+]
+version = version[0].split(" = ")[-1].strip('"')
 
-def get_version():
-    text = open(path.join(path.dirname(__file__), "sphinx_tabs", "__init__.py")).read()
-    match = re.compile(r"^__version__\s*\=\s*[\"\']([^\s\'\"]+)", re.M).search(text)
-    return match.group(1)
-
-
-with open("README.md") as readme:
-    long_description = readme.read()
+with open("./README.md", "r") as ff:
+    readme_text = ff.read()
 
 setup(
-    name="sphinx-tabs",
-    version=get_version(),
-    description="Tabbed views for Sphinx",
-    long_description=open("README.md").read(),
+    name="sphinx-panels",
+    version=version,
+    description="A sphinx extension for creating panels in a grid layout.",
+    long_description=readme_text,
     long_description_content_type="text/markdown",
-    author="djungelorm",
-    author_email="djungelorm@users.noreply.github.com",
-    packages=["sphinx_tabs"],
-    include_package_data=True,
-    url="https://github.com/executablebooks/sphinx-tabs",
+    author="Chris Sewell",
+    author_email="chrisj_sewell@hotmail.com",
+    url="https://github.com/executablebooks/sphinx-panels",
+    project_urls={"Documentation": "https://sphinx-panels.readthedocs.io"},
     license="MIT",
-    python_requires="~=3.7",
-    install_requires=["sphinx", "pygments", "docutils~=0.18.0"],
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=[
+        "docutils",
+        "sphinx>=2,<5",
+        'importlib-resources~=3.0.0; python_version < "3.7"',
+    ],
     extras_require={
-        "testing": [
-            "coverage",
-            "pytest>=7.1,<8",
-            "pytest-cov",
-            "pytest-regressions",
-            "pygments",
-            "sphinx_testing",
-            "bs4",
-            "rinohtype",
+        "themes": [
+            # ref: https://github.com/sphinx-doc/sphinx/issues/10291
+            "Jinja2<3.1",
+            "sphinx-rtd-theme",
+            "pydata-sphinx-theme~=0.4.0",
+            "sphinx-book-theme~=0.0.36",
+            "myst-parser~=0.12.9",
         ],
-        "code_style": ["pre-commit==2.13.0"],
+        "code_style": ["pre-commit~=2.7.0"],
+        "testing": ["pytest~=6.0.1", "pytest-regressions~=2.0.1"],
+        "live-dev": ["sphinx-autobuild", "web-compile~=0.2.0"],
     },
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "Environment :: Plugins",
-        "Environment :: Web Environment",
-        "Framework :: Sphinx :: Extension",
-        "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
-        "Natural Language :: English",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python",
-        "Topic :: Documentation :: Sphinx",
-        "Topic :: Documentation",
-        "Topic :: Software Development :: Documentation",
-        "Topic :: Text Processing",
-        "Topic :: Utilities",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Framework :: Sphinx :: Extension",
     ],
+    keywords="sphinx html bootstrap grid card dropdown button badge",
 )

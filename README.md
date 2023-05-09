@@ -1,191 +1,118 @@
-# sphinx-tabs
+# sphinx-panels
 
-[![Github-CI][github-ci]][github-link]
-[![Coverage Status][codecov-badge]][codecov-link]
+[![Doc Status][rtd-badge]][rtd-link]
+[![Code style: black][black-badge]][black-link]
 [![PyPI][pypi-badge]][pypi-link]
 
-Create tabbed content in [Sphinx documentation](http://www.sphinx-doc.org) when building HTML.
+🚨This repository is not actively maintained. Use [`sphinx-design`](https://github.com/executablebooks/sphinx-design) instead! See [the migration guide](https://sphinx-design.readthedocs.io/en/latest/get_started.html#migrating-from-sphinx-panels) and [this github issue](https://github.com/executablebooks/sphinx-design/issues/51) for more information.🚨
 
-For example, see the [Raw] code of [docs/index.rst](docs/index.rst) which generates the following:
+A sphinx extension for creating document components optimised for HTML+CSS.
 
-A live demo can be found here: <https://sphinx-tabs.readthedocs.io>
+- The `panels` directive creates panels of content in a grid layout, utilising both the Bootstrap 4 [grid system](https://getbootstrap.com/docs/4.0/layout/grid/), and [cards layout](https://getbootstrap.com/docs/4.0/components/card/).
 
-![Tabs](/images/tabs.gif)
+- The `link-button` directive creates a click-able button, linking to a URL or reference, and can also be used to make an entire panel click-able.
 
-## Installation
+- The `dropdown` directive creates toggle-able content.
 
-```bash
-pip install sphinx-tabs
+- The `tabbed` directive creates tabbed content.
+
+- `opticon` and `fa` (fontawesome) roles allow for inline icons to be added.
+
+
+```rst
+.. panels::
+
+    Content of the top-left panel
+
+    ---
+
+    Content of the top-right panel
+
+    ---
+
+    Content of the bottom-left panel
+
+    ---
+
+    Content of the bottom-right panel
 ```
 
-To enable the extension in Sphinx, add the following to your conf.py:
+The `link-button` directive can be used to create buttons, which link to a URL (default) or reference.
+They can be styled by [Bootstrap button classes](https://getbootstrap.com/docs/4.0/components/buttons/):
 
-```python
-extensions = ['sphinx_tabs.tabs']
+```rst
+.. panels::
+
+    .. link-button:: https://example.com
+        :type: url
+        :tooltip: hallo
+        :classes: btn-success
+
+    ---
+
+    This entire panel is clickable.
+
+    +++
+
+    .. link-button:: panels/usage
+        :type: ref
+        :text: Go To Reference
+        :classes: btn-outline-primary btn-block stretched-link
 ```
 
-If needed, there is a configuration option to allow additional builders to be considered compatible. For example, to add the `linkcheck` builder, add the following to your conf.py:
+The `dropdown` directive combines a [Bootstrap card](https://getbootstrap.com/docs/4.0/components/card/)
+with the [HTML details tag](https://www.w3schools.com/tags/tag_details.asp) to create a collapsible
+drop-down panel.
 
-```python
-sphinx_tabs_valid_builders = ['linkcheck']
+```rst
+.. dropdown:: Click on me to see my content!
+
+    I'm the content which can be anything:
+
+    .. link-button:: https://example.com
+        :text: Like a Button
+        :classes: btn-primary
 ```
 
-If you are using [Read The Docs](https://readthedocs.org/) for building your documentation, the extension must be added as a requirement. Please add the following to `requirements.txt` at the root of the project:
+## Development
 
-```
-sphinx-tabs
-```
-
-## Contributing
-
-We welcome all contributions!
-See the [EBP Contributing Guide](https://executablebooks.org/en/latest/contributing.html) for general details.
-
-The simplest way to run tests is to install [pre-commit](https://pre-commit.com/) for linting and [tox](https://tox.readthedocs.io) for unit tests and documentation build:
+To run the tests:
 
 ```console
-$ pre-commit run --all
+pip install tox
+tox -e py37-sphinx3
 ```
+
+To test building the docs:
 
 ```console
-$ tox -p
+tox -e docs-clean html
+tox -e docs-rebuild html
 ```
 
-## Basic Tabs
+For live builds of the docs:
 
-Basic tabs can be coded as follows:
-
-```rst
-.. tabs::
-
-   .. tab:: Apples
-
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
-
-   .. tab:: Oranges
-
-      Oranges are orange.
+```console
+tox -e docs-live html
 ```
 
-![Tabs](/images/tabs.gif)
+You can also build the docs in different themes, by setting `HTML_THEME` to one of `alabaster`, `sphinx_rtd_theme`, `pydata_sphinx_theme`, `sphinx_book_theme`:
 
-The contents of each tab can be displayed by clicking on the tab that you wish to show. Clicking on the tab that is currently open will hide the tab's content, leaving only the tab set labels visible.
-
-Alternatively, tab sets can be focused using :kbd:`Tab`. The :kbd:`Left Arrow` and :kbd:`Right Arrow` keys can then be used to navigate across the tab set and :kbd:`Enter` can be used to select a tab.
-
-## Grouped Tabs
-
-Tabs can be grouped, so that changing the current tab in one tabset changes the current tab in all other tabsets containing a tab with a matching label.
-For example:
-
-```rst
-.. tabs::
-
-   .. group-tab:: Linux
-
-      Linux Line 1
-
-   .. group-tab:: Mac OSX
-
-      Mac OSX Line 1
-
-   .. group-tab:: Windows
-
-      Windows Line 1
-
-.. tabs::
-
-   .. group-tab:: Linux
-
-      Linux Line 1
-
-   .. group-tab:: Mac OSX
-
-      Mac OSX Line 1
-
-   .. group-tab:: Windows
-
-      Windows Line 1
+```console
+export HTML_THEME=sphinx_book_theme
+tox -e docs-live
 ```
 
-![Group Tabs](/images/groupTabs.gif)
+For code style and SCSS -> CSS updating:
 
-If permitted by the user's browser, the last selected group tab will be remembered when changing page. As such, if any tabsets on the next page contain a tab with the same label it will be selected.
-
-
-## Code Tabs
-
-Grouped tabs containing code with syntax highlighting can be created as follows:
-
-```rst
-.. tabs::
-
-   .. code-tab:: c
-
-         int main(const int argc, const char **argv) {
-           return 0;
-         }
-
-   .. code-tab:: c++
-
-         int main(const int argc, const char **argv) {
-           return 0;
-         }
-
-   .. code-tab:: py
-
-         def main():
-             return
-
-   .. code-tab:: java
-
-         class Main {
-             public static void main(String[] args) {
-             }
-         }
-
-   .. code-tab:: julia
-
-         function main()
-         end
-
-   .. code-tab:: fortran
-
-         PROGRAM main
-         END PROGRAM main
+```console
+pip install pre-commit
+pre-commit run --all
 ```
 
-![Code Tabs](/images/codeTabs.gif)
-
-Code tabs also support custom lexers (added via sphinx `conf.py`). Pass the lexers alias as the first argument of `code-tab`.
-
-By default, code tabs are labelled with the language name, though a custom label can be provided as an optional second argument to the `code-tabs` directive:
-
-```rst
-.. tabs::
-
-   .. code-tab:: c I love C
-
-         int main(const int argc, const char **argv) {
-           return 0;
-         }
-
-   .. code-tab:: py I love Python more
-
-         def main():
-             return
-
-```
-
-The tab label is used to group tabs, including `code-tabs`. As such, the same custom label should be used to group related tabs.
-
-[github-ci]: https://github.com/executablebooks/sphinx-tabs/workflows/continuous-integration/badge.svg?branch=master
-[github-link]: https://github.com/executablebooks/sphinx-tabs
-[pypi-badge]: https://img.shields.io/pypi/v/sphinx-tabs.svg
-[pypi-link]: https://pypi.org/project/sphinx-tabs
-[codecov-badge]: https://codecov.io/gh/executablebooks/sphinx-tabs/branch/master/graph/badge.svg
-[codecov-link]: https://codecov.io/gh/executablebooks/sphinx-tabs
+[rtd-badge]: https://readthedocs.org/projects/sphinx-panels/badge/?version=latest
+[rtd-link]: https://sphinx-panels.readthedocs.io/en/latest/?badge=latest
+[black-badge]: https://img.shields.io/badge/code%20style-black-000000.svg
+[black-link]: https://github.com/ambv/black
+[pypi-badge]: https://img.shields.io/pypi/v/sphinx-panels.svg
+[pypi-link]: https://pypi.org/project/sphinx-panels
