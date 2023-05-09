@@ -1,11 +1,23 @@
-include AUTHORS.rst
-include .github/CONTRIBUTING.rst
-include README.rst
-include CHANGES
+exclude docs
+recursive-exclude docs *
+exclude tests
+recursive-exclude tests *
+exclude images
+recursive-exclude images *
+
+exclude .pre-commit-config.yaml
+exclude .readthedocs.yml
+exclude pylint.cfg
+exclude tox.ini
+exclude codecov.yml
+
 include LICENSE
-include MANIFEST.in
-include requirements.txt
-recursive-include requirements *.txt
-recursive-include docs *
-recursive-include readthedocs *
-recursive-exclude readthedocs *.pyc
+include README.md
+include CHANGELOG.md
+
+recursive-include sphinx_tabs *.css
+recursive-include sphinx_tabs *.js
+
+include *.js
+include *.json
+recursive-include __tests__ *.js

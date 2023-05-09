@@ -1,4 +1,0 @@
-# Delisted project, removing from search indexing
-# See: https://docs.readthedocs.io/en/stable/unofficial-projects.html
-User-agent: *
-Disallow: /
