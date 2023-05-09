@@ -1,1 +1,0 @@
-DPS_TYPE = "dynamicPurchasingSystem"

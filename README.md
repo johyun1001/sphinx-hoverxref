@@ -1,149 +1,191 @@
-# Prozorro Openprocurement Api
+# sphinx-tabs
 
+[![Github-CI][github-ci]][github-link]
+[![Coverage Status][codecov-badge]][codecov-link]
+[![PyPI][pypi-badge]][pypi-link]
 
+Create tabbed content in [Sphinx documentation](http://www.sphinx-doc.org) when building HTML.
+
+For example, see the [Raw] code of [docs/index.rst](docs/index.rst) which generates the following:
+
+A live demo can be found here: <https://sphinx-tabs.readthedocs.io>
+
+![Tabs](/images/tabs.gif)
 
 ## Installation
 
-```
-docker-compose build
-docker-compose up
-```
-
-## Documentation
-
-OpenProcurement is initiative to develop software 
-powering tenders database and reverse auction.
-
-'openprocurement.api' is component responsible for 
-exposing the tenders database to brokers and public.
-
-Documentation about this API is accessible at
-https://prozorro-api-docs.readthedocs.io/en/latest/
-
-### Install
-
-1. Install requirements
-
-```
-virtualenv -p python3.8 venv
-source venv/bin/activate
-pip install -r docs/source/requirements.txt
+```bash
+pip install sphinx-tabs
 ```
 
-2. Add "mongo" to be resolved to localhost in /etc/hosts
+To enable the extension in Sphinx, add the following to your conf.py:
 
-```
-echo "127.0.0.1 mongo" >> /etc/hosts
-```
-
-3. To run mongo if you don't have one
-
-```
-docker-compose up -d mongo
+```python
+extensions = ['sphinx_tabs.tabs']
 ```
 
-### Update
+If needed, there is a configuration option to allow additional builders to be considered compatible. For example, to add the `linkcheck` builder, add the following to your conf.py:
 
-Running tests to update http files::
-
-```
-py.test docs/tests  # all
-py.test docs/tests/test_belowthreshold.py -k test_docs_milestones  # specific
+```python
+sphinx_tabs_valid_builders = ['linkcheck']
 ```
 
-### Build
-
-Run
+If you are using [Read The Docs](https://readthedocs.org/) for building your documentation, the extension must be added as a requirement. Please add the following to `requirements.txt` at the root of the project:
 
 ```
-sphinx-build -b html docs/source/ docs/build/html
+sphinx-tabs
 ```
 
-or
+## Contributing
 
-```
-cd docs
-make html
-```
+We welcome all contributions!
+See the [EBP Contributing Guide](https://executablebooks.org/en/latest/contributing.html) for general details.
 
-### Translation
+The simplest way to run tests is to install [pre-commit](https://pre-commit.com/) for linting and [tox](https://tox.readthedocs.io) for unit tests and documentation build:
 
-For translation into *uk* (2 letter ISO language code), you have to follow the scenario:
-
-1. Pull all translatable strings out of documentation
-
-```
-cd docs
-make gettext
+```console
+$ pre-commit run --all
 ```
 
-2. Update translation with new/changed strings
-
-```
-cd docs
-sphinx-intl update -p build/locale -l uk -w 0
+```console
+$ tox -p
 ```
 
-3. Update updated/missing strings in `docs/locale/uk/LC_MESSAGES/*.po` with your-favorite-editor/poedit/transifex/pootle/etc to have all translations complete/updated.
+## Basic Tabs
 
-4. Compile the translation
+Basic tabs can be coded as follows:
+
+```rst
+.. tabs::
+
+   .. tab:: Apples
+
+      Apples are green, or sometimes red.
+
+   .. tab:: Pears
+
+      Pears are green.
+
+   .. tab:: Oranges
+
+      Oranges are orange.
+```
+
+![Tabs](/images/tabs.gif)
+
+The contents of each tab can be displayed by clicking on the tab that you wish to show. Clicking on the tab that is currently open will hide the tab's content, leaving only the tab set labels visible.
+
+Alternatively, tab sets can be focused using :kbd:`Tab`. The :kbd:`Left Arrow` and :kbd:`Right Arrow` keys can then be used to navigate across the tab set and :kbd:`Enter` can be used to select a tab.
+
+## Grouped Tabs
+
+Tabs can be grouped, so that changing the current tab in one tabset changes the current tab in all other tabsets containing a tab with a matching label.
+For example:
+
+```rst
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Linux Line 1
+
+   .. group-tab:: Mac OSX
+
+      Mac OSX Line 1
+
+   .. group-tab:: Windows
+
+      Windows Line 1
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Linux Line 1
+
+   .. group-tab:: Mac OSX
+
+      Mac OSX Line 1
+
+   .. group-tab:: Windows
+
+      Windows Line 1
+```
+
+![Group Tabs](/images/groupTabs.gif)
+
+If permitted by the user's browser, the last selected group tab will be remembered when changing page. As such, if any tabsets on the next page contain a tab with the same label it will be selected.
+
+
+## Code Tabs
+
+Grouped tabs containing code with syntax highlighting can be created as follows:
+
+```rst
+.. tabs::
+
+   .. code-tab:: c
+
+         int main(const int argc, const char **argv) {
+           return 0;
+         }
+
+   .. code-tab:: c++
+
+         int main(const int argc, const char **argv) {
+           return 0;
+         }
+
+   .. code-tab:: py
+
+         def main():
+             return
+
+   .. code-tab:: java
+
+         class Main {
+             public static void main(String[] args) {
+             }
+         }
+
+   .. code-tab:: julia
+
+         function main()
+         end
+
+   .. code-tab:: fortran
+
+         PROGRAM main
+         END PROGRAM main
+```
+
+![Code Tabs](/images/codeTabs.gif)
+
+Code tabs also support custom lexers (added via sphinx `conf.py`). Pass the lexers alias as the first argument of `code-tab`.
+
+By default, code tabs are labelled with the language name, though a custom label can be provided as an optional second argument to the `code-tabs` directive:
+
+```rst
+.. tabs::
+
+   .. code-tab:: c I love C
+
+         int main(const int argc, const char **argv) {
+           return 0;
+         }
+
+   .. code-tab:: py I love Python more
+
+         def main():
+             return
 
 ```
-cd docs
-sphinx-intl build
-```
 
+The tab label is used to group tabs, including `code-tabs`. As such, the same custom label should be used to group related tabs.
 
-## Related services projects
-
-### Current services projects
-
-#### openprocurement.documentservice
-
-Document service
-
-https://github.com/ProzorroUKR/openprocurement.documentservice
-
-#### prozorro_tasks
-
-Integration tasks service
-
-https://github.com/ProzorroUKR/prozorro_tasks
-
-#### prozorro-auction
-
-Auction service
-
-https://github.com/ProzorroUKR/prozorro-auction
-
-https://github.com/ProzorroUKR/prozorro-auction-frontend
-
-#### prozorro_chronograph
-
-Chronograph service
-
-https://github.com/ProzorroUKR/prozorro_chronograph
-
-#### prozorro-bridge-contracting
-
-Contracting bridge
-
-https://github.com/ProzorroUKR/prozorro-bridge-contracting
-
-#### prozorro-bridge-frameworkagreement
-
-Frameworkagreement bridge
-
-https://github.com/ProzorroUKR/prozorro-bridge-frameworkagreement
-
-#### prozorro-bridge-competitivedialogue
-
-Competitivedialogue bridge
-
-https://github.com/ProzorroUKR/prozorro-bridge-competitivedialogue
-
-#### prozorro-bridge-pricequotation
-
-Price Quotation bridge
-
-https://github.com/ProzorroUKR/prozorro-bridge-pricequotation
+[github-ci]: https://github.com/executablebooks/sphinx-tabs/workflows/continuous-integration/badge.svg?branch=master
+[github-link]: https://github.com/executablebooks/sphinx-tabs
+[pypi-badge]: https://img.shields.io/pypi/v/sphinx-tabs.svg
+[pypi-link]: https://pypi.org/project/sphinx-tabs
+[codecov-badge]: https://codecov.io/gh/executablebooks/sphinx-tabs/branch/master/graph/badge.svg
+[codecov-link]: https://codecov.io/gh/executablebooks/sphinx-tabs

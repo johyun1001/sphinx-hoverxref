@@ -1,105 +1,62 @@
-import os
-from setuptools import setup, find_packages
-
-version = "2.6.197"
-
-here = os.path.abspath(os.path.dirname(__file__))
-
-with open(os.path.join(here, "README.md")) as f:
-    README = f.read()
-
-requires = []
-
-with open('requirements.txt', 'r') as f:
-    for resource in f.readlines():
-        if not resource.startswith('git+'):
-            requires.append(resource.strip())
-        else:
-            res = resource.strip()
-            egg = res.split("#egg=")[1]
-            requires.append("@".join([egg, res]))
-
-tests_requires = requires
+from os import path
+import re
+from setuptools import setup
 
 
-entry_points = {
-    "paste.app_factory": [
-        "main = openprocurement.api.app:main"
-    ],
-    "paste.filter_app_factory": [
-        "translogger = openprocurement.api.translogger:make_filter"
-    ],
-    "openprocurement.api.plugins": [
-        "api = openprocurement.api.includeme:includeme",
-        "tender.core = openprocurement.tender.core.includeme:includeme",
-        "planning.api = openprocurement.planning.api.includeme:includeme",
-        "contracting.api = openprocurement.contracting.api.includeme:includeme",
-        "historical.core = openprocurement.historical.core.includeme:includeme",
-        "relocation.api = openprocurement.relocation.api.includeme:includeme",
-        "framework.core = openprocurement.framework.core.includeme:includeme",
-    ],
-    "openprocurement.tender.core.plugins": [
-        "tender.belowthreshold = openprocurement.tender.belowthreshold.includeme:includeme",
-        "tender.open = openprocurement.tender.open.includeme:includeme",
-        "tender.openua = openprocurement.tender.openua.includeme:includeme",
-        "tender.openeu = openprocurement.tender.openeu.includeme:includeme",
-        "tender.openuadefense = openprocurement.tender.openuadefense.includeme:includeme",
-        "tender.limited.reporting = openprocurement.tender.limited.includeme:includeme",
-        "tender.limited.negotiation = openprocurement.tender.limited.includeme:includeme_negotiation",
-        "tender.limited.negotiation.quick = openprocurement.tender.limited.includeme:includeme_negotiation_quick",
-        "tender.competitivedialogue = openprocurement.tender.competitivedialogue.includeme:includeme",
-        "tender.esco = openprocurement.tender.esco.includeme:includeme",
-        "tender.cfaua = openprocurement.tender.cfaua.includeme:includeme",
-        "tender.cfaselectionua = openprocurement.tender.cfaselectionua.includeme:includeme",
-        "tender.pricequotation = openprocurement.tender.pricequotation.includeme:includeme",
-        "tender.simpledefense = openprocurement.tender.simpledefense.includeme:includeme",
-    ],
-    "openprocurement.historical.core.plugins": [
-        "historical.tender = openprocurement.historical.tender.includeme:includeme",
-    ],
-    "openprocurement.framework.core.plugins": [
-        "framework.electroniccatalogue = openprocurement.framework.electroniccatalogue.includeme:includeme",
-        "framework.dps = openprocurement.framework.dps.includeme:includeme",
-        "framework.cfaua = openprocurement.framework.cfaua.includeme:includeme",
-    ],
-    "openprocurement.api.migrations": [
-        "tenders = openprocurement.api.migration:migrate_data",
-        "contracts = openprocurement.contracting.api.migration:migrate_data",
-        "frameworks = openprocurement.framework.core.migration:migrate_data",
-    ],
-    "console_scripts": [
-        "bootstrap_api_security = openprocurement.api.database:bootstrap_api_security"
-    ]
-}
+def get_version():
+    text = open(path.join(path.dirname(__file__), "sphinx_tabs", "__init__.py")).read()
+    match = re.compile(r"^__version__\s*\=\s*[\"\']([^\s\'\"]+)", re.M).search(text)
+    return match.group(1)
+
+
+with open("README.md") as readme:
+    long_description = readme.read()
 
 setup(
-    name="openprocurement.api",
-    version=version,
-    description="openprocurement.api",
-    long_description=README,
-    classifiers=[
-        "Framework :: Pylons",
-        "License :: OSI Approved :: Apache Software License",
-        "Programming Language :: Python",
-        "Topic :: Internet :: WWW/HTTP",
-        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application"
-    ],
-    keywords="web services",
-    author="Quintagroup, Ltd.",
-    author_email="info@quintagroup.com",
-    license="Apache License 2.0",
-    url="https://github.com/ProzorroUKR/openprocurement.api",
-    package_dir={"": "src"},
-    packages=find_packages("src"),
-    namespace_packages=["openprocurement"],
+    name="sphinx-tabs",
+    version=get_version(),
+    description="Tabbed views for Sphinx",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    author="djungelorm",
+    author_email="djungelorm@users.noreply.github.com",
+    packages=["sphinx_tabs"],
     include_package_data=True,
-    package_data={
-        "": ["*.json", "*.ini"],
+    url="https://github.com/executablebooks/sphinx-tabs",
+    license="MIT",
+    python_requires="~=3.7",
+    install_requires=["sphinx", "pygments", "docutils~=0.18.0"],
+    extras_require={
+        "testing": [
+            "coverage",
+            "pytest>=7.1,<8",
+            "pytest-cov",
+            "pytest-regressions",
+            "pygments",
+            "sphinx_testing",
+            "bs4",
+            "rinohtype",
+        ],
+        "code_style": ["pre-commit==2.13.0"],
     },
-    zip_safe=False,
-    install_requires=requires,
-    setup_requires=["pytest-runner"],
-    tests_require=tests_requires,
-    extras_require={"test": tests_requires},
-    entry_points=entry_points,
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Environment :: Plugins",
+        "Environment :: Web Environment",
+        "Framework :: Sphinx :: Extension",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python",
+        "Topic :: Documentation :: Sphinx",
+        "Topic :: Documentation",
+        "Topic :: Software Development :: Documentation",
+        "Topic :: Text Processing",
+        "Topic :: Utilities",
+    ],
 )
