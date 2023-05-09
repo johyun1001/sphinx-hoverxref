@@ -7,7 +7,6 @@ Read the Docs: documentation simplified
    :hidden:
    :caption: HAC
 
-   /hac/index
    /intro/getting-started-with-sphinx
    /intro/getting-started-with-mkdocs
    /intro/import-guide
@@ -28,7 +27,7 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption:  How-to guides
+   :caption: How-to guides
 
    Project setup and configuration </guides/setup/index>
    Build process </guides/build/index>
