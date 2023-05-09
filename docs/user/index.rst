@@ -5,16 +5,6 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: HAC
-
-   /intro/getting-started-with-sphinx
-   /intro/getting-started-with-mkdocs
-   /intro/import-guide
-   /examples
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: Explanation
 
    /choosing-a-site
