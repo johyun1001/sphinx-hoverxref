@@ -23,6 +23,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
     "sphinx_inline_tabs",
+    "spinx_tabs.tabs"
     "myst_parser",
 ]
 templates_path = ["_templates"]
@@ -58,5 +59,7 @@ myst_heading_anchors = 3
 # -- Options for HTML output -------------------------------------------------
 #
 
-html_theme = "furo"
-html_title = project
+
+
+
+sphinx_tabs_valid_builders = ['linkcheck']
