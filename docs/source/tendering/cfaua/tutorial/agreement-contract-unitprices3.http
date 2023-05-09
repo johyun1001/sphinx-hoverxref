@@ -1,0 +1,85 @@
+PATCH /api/2.5/tenders/5a06577d0adb4c42907931f3b9b03b2c/agreements/b996fbc0afc54062aac0fbaa492eb9e0/contracts/9a0c84972c4b468788d51e716c0ea464?acc_token=5a77c92a3fdf47b4917bc23307e42385 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 284
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "unitPrices": [
+      {
+        "relatedItem": "f7f221177ecc41369b255d9ba4620b02",
+        "value": {
+          "amount": 0.5,
+          "currency": "UAH",
+          "valueAddedTaxIncluded": true
+        }
+      },
+      {
+        "relatedItem": "95fb67978b4a4d5185a03bebe11d2d59",
+        "value": {
+          "amount": 0.5,
+          "currency": "UAH",
+          "valueAddedTaxIncluded": true
+        }
+      }
+    ]
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "id": "9a0c84972c4b468788d51e716c0ea464",
+    "status": "active",
+    "suppliers": [
+      {
+        "name": "ДКП «Школяр»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137256",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 33",
+          "locality": "м. Вінниця",
+          "region": "Вінницька область",
+          "postalCode": "21100",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "soleksuk@gmail.com",
+          "telephone": "+380432216930",
+          "name": "Сергій Олексюк"
+        },
+        "scale": "micro"
+      }
+    ],
+    "unitPrices": [
+      {
+        "relatedItem": "f7f221177ecc41369b255d9ba4620b02",
+        "value": {
+          "currency": "UAH",
+          "amount": 0.5,
+          "valueAddedTaxIncluded": true
+        }
+      },
+      {
+        "relatedItem": "95fb67978b4a4d5185a03bebe11d2d59",
+        "value": {
+          "currency": "UAH",
+          "amount": 0.5,
+          "valueAddedTaxIncluded": true
+        }
+      }
+    ],
+    "awardID": "510e3acc4e6040c98d0d49bad88a4db8",
+    "bidID": "381f5658b23a448ea820b823934eeb79",
+    "date": "2023-01-01T00:00:00+02:00"
+  }
+}
+

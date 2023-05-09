@@ -1,0 +1,27 @@
+PATCH /api/2.5/tenders/26dac5d9cddc43f1b4178ec68bd3f601/cancellations/a5fdc47692f547c79ad4b6ad05260f4d?acc_token=0abbd55da45a490a9a0ddd6cef990e25 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 37
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "reasonType": "unFixable"
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "id": "a5fdc47692f547c79ad4b6ad05260f4d",
+    "status": "draft",
+    "date": "2023-01-01T00:00:01+02:00",
+    "reasonType": "unFixable",
+    "reason": "cancellation reason",
+    "cancellationOf": "tender"
+  }
+}
+

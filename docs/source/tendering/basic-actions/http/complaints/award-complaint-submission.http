@@ -1,0 +1,82 @@
+POST /api/2.5/tenders/0f776099eb8344b4a149200a8657a9df/awards/ea8449205ea44154a82fc91e01bb162b/complaints?acc_token=f2bfc612f7704605b9f54ae2ed3bc9f3 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1463
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "description": "Умови виставлені замовником не містять достатньо інформації, щоб заявка мала сенс.",
+    "title": "Недостатньо інформації",
+    "status": "draft",
+    "type": "complaint",
+    "author": {
+      "address": {
+        "countryName": "Україна",
+        "locality": "м. Вінниця",
+        "postalCode": "21100",
+        "region": "Вінницька область",
+        "streetAddress": "вул. Островського, 33"
+      },
+      "contactPoint": {
+        "email": "soleksuk@gmail.com",
+        "name": "Сергій Олексюк",
+        "telephone": "+380432216930"
+      },
+      "identifier": {
+        "scheme": "UA-EDR",
+        "legalName": "ДКП «Школяр»",
+        "id": "00137256",
+        "uri": "http://www.sc.gov.ua/"
+      },
+      "name": "ДКП «Школяр»"
+    }
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/0f776099eb8344b4a149200a8657a9df/awards/ea8449205ea44154a82fc91e01bb162b/complaints/c4977860749648c98c3c5eb180f8b1fc
+
+{
+  "data": {
+    "id": "c4977860749648c98c3c5eb180f8b1fc",
+    "complaintID": "UA-2023-01-01-000001-a.1",
+    "date": "2023-01-01T00:00:01+02:00",
+    "type": "complaint",
+    "author": {
+      "name": "ДКП «Школяр»",
+      "address": {
+        "streetAddress": "вул. Островського, 33",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21100",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "name": "Сергій Олексюк",
+        "email": "soleksuk@gmail.com",
+        "telephone": "+380432216930"
+      },
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00137256",
+        "legalName": "ДКП «Школяр»",
+        "uri": "http://www.sc.gov.ua/"
+      }
+    },
+    "title": "Недостатньо інформації",
+    "description": "Умови виставлені замовником не містять достатньо інформації, щоб заявка мала сенс.",
+    "status": "draft",
+    "value": {
+      "amount": 3000,
+      "currency": "UAH"
+    }
+  },
+  "access": {
+    "token": "68cdf872f5994c55b65313d49deee3fa",
+    "transfer": "ca34af808bde4738ae656c1ee12c1175"
+  }
+}
+

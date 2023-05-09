@@ -1,0 +1,227 @@
+POST /api/2.5/tenders/ceb28fdcf5944cd8b77800a6e86733f6/bids HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1904
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "selfQualified": true,
+    "status": "draft",
+    "tenderers": [
+      {
+        "address": {
+          "countryName": "Україна",
+          "locality": "м. Львів",
+          "postalCode": "79013",
+          "region": "Львівська область",
+          "streetAddress": "вул. Островського, 34"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "name": "Андрій Олексюк",
+          "telephone": "+380322916930"
+        },
+        "identifier": {
+          "scheme": "UA-EDR",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "id": "00137226",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "name": "ДКП «Книга»",
+        "scale": "sme"
+      }
+    ],
+    "lotValues": [
+      {
+        "value": {
+          "annualCostsReduction": [
+            700,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600
+          ],
+          "yearlyPaymentsPercentage": 0.9,
+          "contractDuration": {
+            "years": 7
+          }
+        },
+        "relatedLot": "47aa65f0d5b944629ab6126141681de8"
+      },
+      {
+        "subcontractingDetails": "ДКП «Укр Прінт», Україна",
+        "value": {
+          "annualCostsReduction": [
+            600,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200
+          ],
+          "yearlyPaymentsPercentage": 0.96,
+          "contractDuration": {
+            "years": 9
+          }
+        },
+        "relatedLot": "42032ff885e34954a4dd831b4a0e4059"
+      }
+    ]
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/ceb28fdcf5944cd8b77800a6e86733f6/bids/08194921af9d4f4eb7bc00b0c15c97cf
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "name": "ДКП «Книга»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137226",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 34",
+          "locality": "м. Львів",
+          "region": "Львівська область",
+          "postalCode": "79013",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "telephone": "+380322916930",
+          "name": "Андрій Олексюк"
+        },
+        "scale": "sme"
+      }
+    ],
+    "status": "draft",
+    "selfQualified": true,
+    "lotValues": [
+      {
+        "relatedLot": "47aa65f0d5b944629ab6126141681de8",
+        "status": "pending",
+        "value": {
+          "currency": "UAH",
+          "valueAddedTaxIncluded": true,
+          "yearlyPaymentsPercentage": 0.9,
+          "annualCostsReduction": [
+            700,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600,
+            1600
+          ],
+          "contractDuration": {
+            "years": 7,
+            "days": 0
+          },
+          "amountPerformance": 1984.18,
+          "amount": 9273.95
+        },
+        "date": "2023-01-01T00:00:00+02:00"
+      },
+      {
+        "relatedLot": "42032ff885e34954a4dd831b4a0e4059",
+        "subcontractingDetails": "ДКП «Укр Прінт», Україна",
+        "status": "pending",
+        "value": {
+          "currency": "UAH",
+          "valueAddedTaxIncluded": true,
+          "yearlyPaymentsPercentage": 0.96,
+          "annualCostsReduction": [
+            600,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200,
+            1200
+          ],
+          "contractDuration": {
+            "years": 9,
+            "days": 0
+          },
+          "amountPerformance": 884.68,
+          "amount": 9795.16
+        },
+        "date": "2023-01-01T00:00:00+02:00"
+      }
+    ],
+    "id": "08194921af9d4f4eb7bc00b0c15c97cf",
+    "date": "2023-01-01T00:00:00+02:00"
+  },
+  "access": {
+    "token": "2dfb1d8a8b0745b1bf83faac1b450f05",
+    "transfer": "dfe62dcbf4944f9588306f275eb2922d"
+  }
+}
+

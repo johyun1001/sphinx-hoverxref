@@ -1,0 +1,28 @@
+GET /api/2.5/agreements/b7536ab0fbe34a1dafa73fe7943ff79c/changes HTTP/1.0
+Authorization: Bearer broker
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "id": "021c093dc15d4e078ce3061ae63cd514",
+      "status": "active",
+      "date": "2023-01-01T00:00:00+02:00",
+      "rationale": "Друга і третя поставка має бути розфасована",
+      "rationale_en": "Agreement change cause",
+      "dateSigned": "2023-01-01T00:00:00+02:00",
+      "rationaleType": "taxRate",
+      "modifications": [
+        {
+          "itemId": "b0a774dcb2784648b6f81791b294a6be",
+          "factor": 0.1605
+        }
+      ]
+    }
+  ]
+}
+

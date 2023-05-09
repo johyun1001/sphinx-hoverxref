@@ -1,0 +1,76 @@
+PATCH /api/2.5/tenders/f83728385fa9438bb4c5c118ffc5012a/criteria/df5cc43dbf914389a9b11f5d64b152f8?acc_token=ca00870e9e594a068127cf82158c01a2 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 36
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "title": "Updated title"
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "title": "Updated title",
+    "description": "Службова (посадова) особа учасника процедури закупівлі, яка підписала тендерну пропозицію (або уповноважена на підписання договору в разі переговорної процедури закупівлі) або фізична особа, яка є учасником процедури закупівлі, не була засуджена за злочин, учинений з корисливих мотивів (зокрема, пов'язаний з хабарництвом та відмиванням коштів), судимість з якої знято або погашено у встановленому законом порядку",
+    "source": "tenderer",
+    "relatesTo": "tenderer",
+    "classification": {
+      "scheme": " espd211",
+      "id": "CRITERION.OTHER"
+    },
+    "id": "df5cc43dbf914389a9b11f5d64b152f8",
+    "legislation": [
+      {
+        "version": "2020-04-19",
+        "identifier": {
+          "id": "922-VIII",
+          "legalName": "Закон України \"Про публічні закупівлі\"",
+          "uri": "https://zakon.rada.gov.ua/laws/show/922-19"
+        },
+        "type": "NATIONAL_LEGISLATION",
+        "article": "17.1.5"
+      },
+      {
+        "version": "2020-04-19",
+        "identifier": {
+          "id": "922-VIII",
+          "legalName": "Закон України \"Про публічні закупівлі\"",
+          "uri": "https://zakon.rada.gov.ua/laws/show/922-19"
+        },
+        "type": "NATIONAL_LEGISLATION",
+        "article": "17.1.6"
+      }
+    ],
+    "requirementGroups": [
+      {
+        "description": "Учасник фізична особа підтверджує, що",
+        "requirements": [
+          {
+            "title": "Фізична особа, яка є учасником процедури закупівлі, не була засуджена за злочин, учинений з корисливих мотивів (зокрема, пов'язаний з хабарництвом та відмиванням коштів), судимість з якої знято або погашено у встановленому законом порядку",
+            "dataType": "boolean",
+            "eligibleEvidences": [
+              {
+                "title": "Документальне підтвердження",
+                "description": "Довідка в довільній формі",
+                "type": "document",
+                "id": "018d7ea73edc4f64ab52eec34ec6ce9a"
+              }
+            ],
+            "expectedValue": "true",
+            "status": "active",
+            "id": "fc4c7b31124044c691ba5f51c6520312",
+            "datePublished": "2023-01-01T00:00:00+02:00"
+          }
+        ],
+        "id": "8400e4decbe74b99af293a42e94c7671"
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,57 @@
+GET /api/2.5/tenders/f83728385fa9438bb4c5c118ffc5012a/criteria/df5cc43dbf914389a9b11f5d64b152f8/requirement_groups HTTP/1.0
+Authorization: Bearer broker
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "description": "Updated description",
+      "requirements": [
+        {
+          "title": "Фізична особа, яка є учасником процедури закупівлі, не була засуджена за злочин, учинений з корисливих мотивів (зокрема, пов'язаний з хабарництвом та відмиванням коштів), судимість з якої знято або погашено у встановленому законом порядку",
+          "dataType": "boolean",
+          "eligibleEvidences": [
+            {
+              "title": "Документальне підтвердження",
+              "description": "Довідка в довільній формі",
+              "type": "document",
+              "id": "018d7ea73edc4f64ab52eec34ec6ce9a"
+            }
+          ],
+          "expectedValue": "true",
+          "status": "active",
+          "id": "fc4c7b31124044c691ba5f51c6520312",
+          "datePublished": "2023-01-01T00:00:00+02:00"
+        }
+      ],
+      "id": "8400e4decbe74b99af293a42e94c7671"
+    },
+    {
+      "description": "Учасник фізична особа підтверджує, що",
+      "requirements": [
+        {
+          "title": "Фізична особа, яка є учасником процедури закупівлі, не була засуджена за злочин, учинений з корисливих мотивів (зокрема, пов'язаний з хабарництвом та відмиванням коштів), судимість з якої знято або погашено у встановленому законом порядку",
+          "dataType": "boolean",
+          "eligibleEvidences": [
+            {
+              "title": "Документальне підтвердження",
+              "description": "Довідка в довільній формі",
+              "type": "document",
+              "id": "8d4dde72297f40b18fcec8def4ee05cc"
+            }
+          ],
+          "expectedValue": "true",
+          "status": "active",
+          "id": "72ee4ac40a9a4dbf942d112bf821d9a5",
+          "datePublished": "2023-01-01T00:00:00+02:00"
+        }
+      ],
+      "id": "702b4995c19f49d0ad08f9f2cc618f58"
+    }
+  ]
+}
+

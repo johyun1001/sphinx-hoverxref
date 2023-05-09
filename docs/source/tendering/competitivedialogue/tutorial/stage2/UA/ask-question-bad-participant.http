@@ -1,0 +1,49 @@
+POST /api/2.5/tenders/32bf03368c4c49869cf9b1103c9c69f8/questions HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1110
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "author": {
+      "address": {
+        "countryName": "Україна",
+        "locality": "м. Львів",
+        "postalCode": "21100",
+        "region": "Львівська область",
+        "streetAddress": "вул. Поле, 33"
+      },
+      "contactPoint": {
+        "email": "pole@gmail.com",
+        "name": "Вільям Поле",
+        "telephone": "+380452216931"
+      },
+      "identifier": {
+        "id": "00137230",
+        "legalName": "ТОВ Бур",
+        "scheme": "UA-EDR",
+        "uri": "http://pole.edu.vn.ua/"
+      },
+      "name": "ТОВ \"Бур\""
+    },
+    "description": "Просимо додати таблицю потрібної калорійності харчування",
+    "title": "Калорійність"
+  }
+}
+
+
+HTTP/1.0 403 Forbidden
+Content-Type: application/json
+
+{
+  "status": "error",
+  "errors": [
+    {
+      "location": "body",
+      "name": "author",
+      "description": "Author can't create question"
+    }
+  ]
+}
+

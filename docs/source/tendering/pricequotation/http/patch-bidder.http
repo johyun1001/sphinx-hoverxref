@@ -1,0 +1,79 @@
+PATCH /api/2.5/tenders/bb8949e735294cbaa864bd3bc68a1e5f/bids/ef1bede622fc44a08d3caa36ebd1de36?acc_token=5f6e8944db8c465987b29fcc71cb81d6 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 36
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "value": {
+      "amount": 459
+    }
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "id": "ef1bede622fc44a08d3caa36ebd1de36",
+    "date": "2023-01-01T00:00:01+02:00",
+    "tenderers": [
+      {
+        "name": "Державне управління справами",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00037256",
+          "uri": "http://www.dus.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Банкова, 11, корпус 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "01220",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "telephone": "+0440000000",
+          "name": "Державне управління справами"
+        },
+        "scale": "micro"
+      }
+    ],
+    "status": "draft",
+    "value": {
+      "amount": 459.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "requirementResponses": [
+      {
+        "id": "41d6e0ec22344c04ba26d0c9860aa329",
+        "requirement": {
+          "id": "25ad302697704d249e9d653933f909ee"
+        },
+        "value": "Розчин для інфузій"
+      },
+      {
+        "id": "99a57e5b692745158ef966db7820b11e",
+        "requirement": {
+          "id": "d3cb95288b334796b1562a0c638e526b"
+        },
+        "value": 5
+      },
+      {
+        "id": "f2263583450b4e2ea0344291b52cf2fc",
+        "requirement": {
+          "id": "a917b3e240d94416aac128cd1c3775e1"
+        },
+        "values": [
+          "Відповідь1",
+          "Відповідь2"
+        ]
+      }
+    ]
+  }
+}
+

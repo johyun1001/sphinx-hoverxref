@@ -1,0 +1,24 @@
+GET /api/2.5/tenders/3cf3333f00394e93bc3caaea00cbe9e2/bids/5896e44a93ff466397bbaaaf13853ea3/documents?acc_token=4d86179b56704bb0a24786d80ef23267 HTTP/1.0
+Authorization: Bearer broker
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "hash": "md5:00000000000000000000000000000000",
+      "title": "Proposal.pdf",
+      "format": "application/pdf",
+      "url": "http://public-docs-sandbox.prozorro.gov.ua/get/3be837e3115f465aa712df8bcef14439?Signature=MI9PnY2SNEsdQCyz7pxKIZAs3mXQJ0Hz%2BZLPkgbTlgq2QhPIBWeixbkL1BjXHfmZh37uwWqvQ3BdV8J6DmLyAg%3D%3D&KeyID=a8968c46",
+      "documentOf": "tender",
+      "confidentiality": "public",
+      "id": "d049aa5e2d6245bc88e64f1778f4b2b5",
+      "datePublished": "2023-01-01T00:00:01+02:00",
+      "dateModified": "2023-01-01T00:00:01+02:00"
+    }
+  ]
+}
+

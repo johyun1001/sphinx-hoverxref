@@ -1,0 +1,64 @@
+PATCH /api/2.5/tenders/5f16f024cad74253882085d3438eb6e0/qualifications/08a71731ca1d4b4fa6cc76d96a018bee/complaints/35bd1e078f9c43ad9dcd392084f0f933 HTTP/1.0
+Authorization: Bearer reviewer
+Content-Length: 252
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "decision": "Тендер скасовується замовником",
+    "status": "stopped",
+    "rejectReason": "tenderCancelled"
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "id": "35bd1e078f9c43ad9dcd392084f0f933",
+    "complaintID": "UA-2023-01-01-000001-a.5",
+    "date": "2023-01-01T00:00:01+02:00",
+    "type": "complaint",
+    "author": {
+      "name": "ДКП «Школяр»",
+      "address": {
+        "streetAddress": "вул. Островського, 33",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21100",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "name": "Сергій Олексюк",
+        "email": "soleksuk@gmail.com",
+        "telephone": "+380432216930"
+      },
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00137256",
+        "legalName": "ДКП «Школяр»",
+        "uri": "http://www.sc.gov.ua/"
+      }
+    },
+    "title": "Недостатньо інформації",
+    "description": "Умови виставлені замовником не містять достатньо інформації, щоб заявка мала сенс.",
+    "dateSubmitted": "2023-01-01T00:00:01+02:00",
+    "decision": "Тендер скасовується замовником",
+    "dateDecision": "2023-01-01T00:00:01+02:00",
+    "dateCanceled": "2023-01-01T00:00:01+02:00",
+    "value": {
+      "amount": 3000.0,
+      "currency": "UAH"
+    },
+    "rejectReason": "tenderCancelled",
+    "status": "stopped",
+    "acceptance": true,
+    "dateAccepted": "2023-01-01T00:00:01+02:00",
+    "reviewDate": "2023-01-01T00:00:01+02:00",
+    "reviewPlace": "Place of review"
+  }
+}
+

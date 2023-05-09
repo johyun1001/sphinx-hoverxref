@@ -1,0 +1,120 @@
+POST /api/2.5/tenders/f2ffdfd3a21b4081841738915486b18b/bids HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1812
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "address": {
+          "countryName": "Україна",
+          "locality": "м. Львів",
+          "postalCode": "79013",
+          "region": "Львівська область",
+          "streetAddress": "вул. Островського, 34"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "name": "Андрій Олексюк",
+          "telephone": "+380322916930"
+        },
+        "identifier": {
+          "scheme": "UA-EDR",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "id": "00137226",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "name": "ДКП «Книга»",
+        "scale": "sme"
+      }
+    ],
+    "value": {
+      "amount": 499
+    },
+    "documents": [
+      {
+        "title": "Proposal_part1.pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/cf174abb36e944eb8ca48f1afe8eb4d2?Signature=WDXegnKNg9AdBRTo4j4t6EF4BMzNnJNbBNfhLP7QnfC05OShy5may0d59F82Od7%2BwFgjO4wuvq6yD8mZa3tDAg%3D%3D&KeyID=a8968c46",
+        "hash": "md5:00000000000000000000000000000000",
+        "format": "application/pdf"
+      },
+      {
+        "title": "Proposal_part2.pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/fa5035ab921b4fb2888800987217ada4?Signature=eTtba2q5X3l9k6OXoEK9GiiYSgndMWeOQoKywqUAHWCIwE2ErQXMA7NocAqnGRJDCHQXXQO%2FXXOF2SJlT2TwDw%3D%3D&KeyID=a8968c46",
+        "hash": "md5:00000000000000000000000000000000",
+        "format": "application/pdf"
+      }
+    ]
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/f2ffdfd3a21b4081841738915486b18b/bids/7c93f54de7f8485889496ff805689a3d
+
+{
+  "data": {
+    "value": {
+      "amount": 499.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "tenderers": [
+      {
+        "name": "ДКП «Книга»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137226",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 34",
+          "locality": "м. Львів",
+          "region": "Львівська область",
+          "postalCode": "79013",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "telephone": "+380322916930",
+          "name": "Андрій Олексюк"
+        },
+        "scale": "sme"
+      }
+    ],
+    "status": "draft",
+    "documents": [
+      {
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "Proposal_part1.pdf",
+        "format": "application/pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/cf174abb36e944eb8ca48f1afe8eb4d2?Signature=nhY11nzZvoAKjFc3a%2FPpyp9%2BxrzoIXCWAYyrTlcJ%2FVzF6BLISq%2FmFK7mkqMFMxpbHQrYyJ%2B0DcVJExrJdvE1DA%3D%3D&KeyID=a8968c46",
+        "documentOf": "tender",
+        "id": "82a3302fb2a84cbc840262e5f4ff86a7",
+        "datePublished": "2023-01-01T00:00:01+02:00",
+        "dateModified": "2023-01-01T00:00:01+02:00"
+      },
+      {
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "Proposal_part2.pdf",
+        "format": "application/pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/fa5035ab921b4fb2888800987217ada4?Signature=9meqwsW99XL5YpmHvnJQjExFMu2X6to3Wor7h88g%2F%2FV5eb6%2FfKI%2B872U0tVny68LXkJ0GMTjT2raZPL%2BOC%2BXAQ%3D%3D&KeyID=a8968c46",
+        "documentOf": "tender",
+        "id": "8df1b1464a774b09a31c7ff0b79a2907",
+        "datePublished": "2023-01-01T00:00:01+02:00",
+        "dateModified": "2023-01-01T00:00:01+02:00"
+      }
+    ],
+    "id": "7c93f54de7f8485889496ff805689a3d",
+    "date": "2023-01-01T00:00:01+02:00"
+  },
+  "access": {
+    "token": "2a5c2fa6ded64c1a87722d5939bcc7fd",
+    "transfer": "1a726c36145d4e8a8944bcf80ee79212"
+  }
+}
+

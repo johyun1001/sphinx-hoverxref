@@ -1,0 +1,153 @@
+GET /api/2.5/tenders/28db6af763c74fceaedc98e147fed6cb HTTP/1.0
+Authorization: Bearer broker
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "mainProcurementCategory": "services",
+    "title_en": "Services in school canteens",
+    "title": "Послуги шкільних їдалень",
+    "procurementMethod": "open",
+    "awardCriteria": "ratedCriteria",
+    "procurementMethodType": "esco",
+    "status": "draft",
+    "minValue": {
+      "amount": 0.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "minimalStepPercentage": 0.006,
+    "yearlyPaymentsPercentageRange": 0.8,
+    "NBUdiscountRate": 0.22986,
+    "fundingKind": "other",
+    "procuringEntity": {
+      "name": "ЗОСШ #10 м.Вінниці",
+      "address": {
+        "streetAddress": "вул. Стахурського. 22",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21027",
+        "countryName": "Україна"
+      },
+      "name_en": "School #10 of Vinnytsia",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "21725150",
+        "legalName": "Заклад \"Загальноосвітня школа І-ІІІ ступенів № 10 Вінницької міської ради\"",
+        "legalName_en": "The institution \"Secondary school I-III levels № 10 Vinnitsa City Council\""
+      },
+      "contactPoint": {
+        "telephone": "+380432465302",
+        "url": "http://sch10.edu.vn.ua/",
+        "name": "Куца Світлана Валентинівна",
+        "name_en": "Kutsa Svitlana V.",
+        "availableLanguage": "uk"
+      },
+      "kind": "general"
+    },
+    "items": [
+      {
+        "id": "6109d472d8f34975a00dd5709cff36a1",
+        "description": "Послуги шкільних їдалень",
+        "description_en": "Services in school canteens",
+        "classification": {
+          "description": "Test",
+          "scheme": "ДК021",
+          "id": "37810000-9"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      },
+      {
+        "id": "f1e2dd652ddf4a4296acc94e78be41e0",
+        "description": "Послуги шкільних їдалень",
+        "description_en": "Services in school canteens",
+        "classification": {
+          "description": "Test",
+          "scheme": "ДК021",
+          "id": "37810000-9"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      }
+    ],
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0
+      },
+      {
+        "id": "7960e8387d084d57925d05cf74584660",
+        "title": "deliveryOfGoods",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0
+      }
+    ],
+    "tenderPeriod": {
+      "endDate": "2023-02-01T00:00:00+02:00",
+      "startDate": "2023-01-01T00:00:00+02:00"
+    },
+    "tenderID": "UA-2023-01-01-000001-a",
+    "owner": "broker",
+    "date": "2023-01-01T00:00:00+02:00",
+    "submissionMethod": "electronicAuction",
+    "enquiryPeriod": {
+      "startDate": "2023-01-01T00:00:00+02:00",
+      "endDate": "2023-01-22T00:00:00+02:00",
+      "clarificationsUntil": "2023-01-26T00:00:00+02:00"
+    },
+    "complaintPeriod": {
+      "startDate": "2023-01-01T00:00:00+02:00",
+      "endDate": "2023-01-28T00:00:00+02:00"
+    },
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00",
+    "id": "28db6af763c74fceaedc98e147fed6cb"
+  },
+  "config": {
+    "hasAuction": true
+  }
+}
+

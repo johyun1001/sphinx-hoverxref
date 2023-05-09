@@ -1,0 +1,227 @@
+GET /api/2.5/tenders/f2ffdfd3a21b4081841738915486b18b HTTP/1.0
+Authorization: Bearer broker
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "funders": [
+      {
+        "name": "Глобальний фонд",
+        "identifier": {
+          "scheme": "XM-DAC",
+          "id": "47045",
+          "legalName": "Глобальний Фонд для боротьби зі СНІДом, туберкульозом і малярією"
+        },
+        "address": {
+          "streetAddress": "Global Health Campus, Chemin du Pommier 40",
+          "locality": "Geneva",
+          "region": "Grand-Saconnex",
+          "postalCode": "1218",
+          "countryName": "Швейцарська Конфедерація"
+        },
+        "contactPoint": {
+          "email": "ccm@theglobalfund.org",
+          "telephone": "+41587911700",
+          "faxNumber": "+41 44 580 6820",
+          "url": "https://www.theglobalfund.org/en/",
+          "name": ""
+        }
+      }
+    ],
+    "date": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:01+02:00",
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "tenderID": "UA-2023-01-01-000001-a",
+    "status": "active.auction",
+    "owner": "broker",
+    "title": "футляри до державних нагород",
+    "mainProcurementCategory": "goods",
+    "submissionMethod": "electronicAuction",
+    "procurementMethod": "open",
+    "awardCriteria": "lowestCost",
+    "value": {
+      "amount": 500.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "guarantee": {
+      "amount": 8.0,
+      "currency": "USD"
+    },
+    "next_check": "2023-01-01T00:36:01+02:00",
+    "minimalStep": {
+      "amount": 15.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "tenderPeriod": {
+      "startDate": "2022-12-25T00:00:01+02:00",
+      "endDate": "2023-01-01T00:00:01+02:00"
+    },
+    "items": [
+      {
+        "id": "ffffffffffffffffffffffffffffffff",
+        "description": "футляри до державних нагород",
+        "description_en": "Cases with state awards",
+        "description_ru": "футляры к государственным наградам",
+        "classification": {
+          "description": "Cartons",
+          "scheme": "ДК021",
+          "id": "44617100-9"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "папір і картон гофровані, паперова й картонна тара"
+          }
+        ],
+        "unit": {
+          "name": "кілограм",
+          "value": {
+            "amount": 6.0,
+            "currency": "UAH",
+            "valueAddedTaxIncluded": true
+          },
+          "code": "KGM"
+        },
+        "quantity": 5.0
+      }
+    ],
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0
+      },
+      {
+        "id": "0f95cecf71134fa899a1be0dcf9ae13c",
+        "title": "deliveryOfGoods",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0
+      }
+    ],
+    "procurementMethodType": "belowThreshold",
+    "procuringEntity": {
+      "name": "Державне управління справами",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00037256",
+        "uri": "http://www.dus.gov.ua/"
+      },
+      "address": {
+        "streetAddress": "вул. Банкова, 11, корпус 1",
+        "locality": "м. Київ",
+        "region": "м. Київ",
+        "postalCode": "01220",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "telephone": "+0440000000",
+        "name": "Державне управління справами"
+      },
+      "kind": "general"
+    },
+    "enquiryPeriod": {
+      "startDate": "2022-12-17T00:00:01+02:00",
+      "clarificationsUntil": "2022-12-26T00:00:01+02:00",
+      "endDate": "2022-12-25T00:00:01+02:00"
+    },
+    "documents": [
+      {
+        "documentType": "technicalSpecifications",
+        "description": "document description modified",
+        "id": "ea74f145137e48f1a821c8b558884625",
+        "datePublished": "2023-01-01T00:00:01+02:00",
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "Notice.pdf",
+        "format": "application/pdf",
+        "url": "http://public-api-sandbox.prozorro.gov.ua/api/2.5/tenders/f2ffdfd3a21b4081841738915486b18b/documents/ea74f145137e48f1a821c8b558884625?download=6d5acc9f6744445090ee6163719b792e",
+        "documentOf": "tender",
+        "dateModified": "2023-01-01T00:00:01+02:00",
+        "author": "tender_owner"
+      },
+      {
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "AwardCriteria.pdf",
+        "format": "application/pdf",
+        "url": "http://public-api-sandbox.prozorro.gov.ua/api/2.5/tenders/f2ffdfd3a21b4081841738915486b18b/documents/31a5413231bb4a329febaf70768c953e?download=8b660719e71c4e3b80ac24648fac52c2",
+        "documentOf": "tender",
+        "id": "31a5413231bb4a329febaf70768c953e",
+        "datePublished": "2023-01-01T00:00:01+02:00",
+        "dateModified": "2023-01-01T00:00:01+02:00",
+        "author": "tender_owner"
+      },
+      {
+        "id": "31a5413231bb4a329febaf70768c953e",
+        "datePublished": "2023-01-01T00:00:01+02:00",
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "AwardCriteria-2.pdf",
+        "format": "application/pdf",
+        "url": "http://public-api-sandbox.prozorro.gov.ua/api/2.5/tenders/f2ffdfd3a21b4081841738915486b18b/documents/31a5413231bb4a329febaf70768c953e?download=cc7c2e1fbe6a49fea049b4173a46deb0",
+        "documentOf": "tender",
+        "dateModified": "2023-01-01T00:00:01+02:00",
+        "author": "tender_owner"
+      }
+    ],
+    "questions": [
+      {
+        "id": "a03f134859d14cba948041dcbde4c80e",
+        "author": {
+          "name": "ДКП «Книга»",
+          "identifier": {
+            "scheme": "UA-EDR",
+            "id": "00137226",
+            "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+            "uri": "http://www.sc.gov.ua/"
+          },
+          "address": {
+            "streetAddress": "вул. Островського, 34",
+            "locality": "м. Львів",
+            "region": "Львівська область",
+            "postalCode": "79013",
+            "countryName": "Україна"
+          },
+          "contactPoint": {
+            "email": "aagt@gmail.com",
+            "telephone": "+380322916930",
+            "name": "Андрій Олексюк"
+          }
+        },
+        "title": "Калорійність",
+        "description": "Просимо додати таблицю потрібної калорійності харчування",
+        "date": "2023-01-01T00:00:01+02:00",
+        "answer": "Таблицю додано в файлі \"Kalorijnist.xslx\"",
+        "questionOf": "tender",
+        "dateAnswered": "2023-01-01T00:00:01+02:00"
+      }
+    ],
+    "auctionPeriod": {
+      "startDate": "2023-01-01T00:00:01+02:00",
+      "shouldStartAfter": "2023-01-02T00:00:00+02:00"
+    },
+    "auctionUrl": "http://auction-sandbox.prozorro.gov.ua/tenders/f2ffdfd3a21b4081841738915486b18b",
+    "id": "f2ffdfd3a21b4081841738915486b18b"
+  },
+  "config": {
+    "hasAuction": true
+  }
+}
+

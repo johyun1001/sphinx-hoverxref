@@ -1,0 +1,111 @@
+GET /api/2.5/tenders/bf399bcd03af45efa76f2d266f03ccf6 HTTP/1.0
+Authorization: Bearer broker
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "title": "футляри до державних нагород",
+    "procurementMethodType": "closeFrameworkAgreementSelectionUA",
+    "awardCriteria": "lowestCost",
+    "procurementMethod": "selective",
+    "procuringEntity": {
+      "name": "Державне управління справами",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00037256",
+        "uri": "http://www.dus.gov.ua/"
+      },
+      "contactPoint": {
+        "telephone": "+0440000000",
+        "name": "Державне управління справами",
+        "availableLanguage": "en"
+      },
+      "additionalContactPoints": [
+        {
+          "telephone": "+0440000000",
+          "name": "Державне управління справами 1",
+          "availableLanguage": "uk"
+        }
+      ],
+      "address": {
+        "streetAddress": "вул. Банкова, 11, корпус 1",
+        "locality": "м. Київ",
+        "region": "м. Київ",
+        "postalCode": "01220",
+        "countryName": "Україна"
+      },
+      "kind": "general"
+    },
+    "status": "draft",
+    "agreements": [
+      {
+        "id": "53e68cfa78da42188f99f9e054e0e168"
+      }
+    ],
+    "items": [
+      {
+        "id": "1662b0e1d59f4e2f8e2c5bd48e03a7bc",
+        "description": "футляри до державних нагород",
+        "description_en": "futliary do derzhavnyh nagorod",
+        "classification": {
+          "description": "New Cartons",
+          "scheme": "ДК021",
+          "id": "44617100-9"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "папір і картон гофровані, паперова й картонна тара"
+          }
+        ],
+        "quantity": 5.0,
+        "deliveryDate": {
+          "startDate": "2023-01-03T00:00:00+02:00",
+          "endDate": "2023-01-06T00:00:00+02:00"
+        },
+        "relatedLot": "50fc7d0cb4e3423491c35387a046af42",
+        "unit": {
+          "name": "item",
+          "code": "KGM",
+          "value": {
+            "amount": 6.0,
+            "currency": "UAH",
+            "valueAddedTaxIncluded": true
+          }
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      }
+    ],
+    "lots": [
+      {
+        "title": "Лот №1",
+        "description": "Опис Лот №1",
+        "id": "50fc7d0cb4e3423491c35387a046af42",
+        "status": "active",
+        "date": "2023-01-01T00:00:00+02:00"
+      }
+    ],
+    "tenderID": "UA-2023-01-01-000001-a",
+    "owner": "broker",
+    "date": "2023-01-01T00:00:00+02:00",
+    "submissionMethod": "electronicAuction",
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00",
+    "id": "bf399bcd03af45efa76f2d266f03ccf6"
+  },
+  "config": {
+    "hasAuction": true
+  }
+}
+

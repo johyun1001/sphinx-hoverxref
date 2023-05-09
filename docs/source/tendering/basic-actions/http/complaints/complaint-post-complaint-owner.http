@@ -1,0 +1,53 @@
+POST /api/2.5/tenders/06a89d3522bf4ba5902cacc12c9a8788/complaints/e4a2dfd3cee1428fb5f0fa24088dd607/posts?acc_token=605190fb1ba54376930ba4ff77df75ef HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 664
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "title": "Уточнення по вимозі",
+    "description": "Додано документ",
+    "recipient": "aboveThresholdReviewers",
+    "relatedPost": "e0b525f8d02e4ec3a11260cd25a36d9f",
+    "documents": [
+      {
+        "title": "post_document_complaint.pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/afe325decc3a47b9a6152c78f5b19667?Signature=YFd7QUeLSkzheLfOUo5ekkOkrxkKkunjzbsvOvAjrbjg4zCJlKlUHFA8AtEKyRBwy89AhlLfspoKZzik9DYMBQ%3D%3D&KeyID=a8968c46",
+        "hash": "md5:00000000000000000000000000000000",
+        "format": "application/pdf"
+      }
+    ]
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/06a89d3522bf4ba5902cacc12c9a8788/complaints/e4a2dfd3cee1428fb5f0fa24088dd607/posts/dfb846d549954306a964199fd2f4b864
+
+{
+  "data": {
+    "id": "dfb846d549954306a964199fd2f4b864",
+    "title": "Уточнення по вимозі",
+    "description": "Додано документ",
+    "documents": [
+      {
+        "id": "8074cd483906496381762a58c7c34d9c",
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "post_document_complaint.pdf",
+        "format": "application/pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/afe325decc3a47b9a6152c78f5b19667?Signature=I%2BSDHWQGH9hP4eLNQgKNS44%2BMe0IXre%2Bnt3gT5QwhGxNPi75C71dT2jK2gPUnWL3uO1nEAoloRQgnZTOueVuDQ%3D%3D&KeyID=a8968c46",
+        "datePublished": "2023-01-01T00:00:00+02:00",
+        "dateModified": "2023-01-01T00:00:00+02:00",
+        "author": "complaint_owner",
+        "documentOf": "tender"
+      }
+    ],
+    "author": "complaint_owner",
+    "recipient": "aboveThresholdReviewers",
+    "datePublished": "2023-01-01T00:00:00+02:00",
+    "relatedPost": "e0b525f8d02e4ec3a11260cd25a36d9f"
+  }
+}
+

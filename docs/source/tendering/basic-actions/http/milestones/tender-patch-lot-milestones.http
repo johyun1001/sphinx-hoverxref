@@ -1,0 +1,186 @@
+PATCH /api/2.5/tenders/19cdc6eddc144c4fb58dca333d3fefd1?acc_token=fb6950851e754b3c9a1d1db4320fe328 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 634
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "milestones": [
+      {
+        "id": "d40e5e789b2e4999bee3c87879f74730",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 5,
+          "type": "banking"
+        },
+        "sequenceNumber": 0,
+        "relatedLot": "31693e70b6c241d98c896077eaea1e71"
+      },
+      {
+        "id": "be29ce19cb374870a781d5fb3c8a54b6",
+        "title": "anotherEvent",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 7,
+          "type": "calendar"
+        },
+        "sequenceNumber": 1,
+        "description": "Підозрілий опис",
+        "relatedLot": "31693e70b6c241d98c896077eaea1e71"
+      }
+    ]
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "date": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00",
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "tenderID": "UA-2023-01-01-000001-a",
+    "status": "draft",
+    "owner": "broker",
+    "title": "футляри до державних нагород",
+    "mainProcurementCategory": "goods",
+    "submissionMethod": "electronicAuction",
+    "procurementMethod": "open",
+    "awardCriteria": "lowestCost",
+    "value": {
+      "amount": 500.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "minimalStep": {
+      "amount": 5.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "tenderPeriod": {
+      "startDate": "2023-01-08T00:00:00+02:00",
+      "endDate": "2023-01-15T00:00:00+02:00"
+    },
+    "items": [
+      {
+        "id": "ffffffffffffffffffffffffffffffff",
+        "description": "футляри до державних нагород",
+        "description_en": "Cases with state awards",
+        "description_ru": "футляры к государственным наградам",
+        "classification": {
+          "description": "Cartons",
+          "scheme": "ДК021",
+          "id": "44617100-9"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "папір і картон гофровані, паперова й картонна тара"
+          }
+        ],
+        "unit": {
+          "name": "кілограм",
+          "value": {
+            "amount": 6.0,
+            "currency": "UAH",
+            "valueAddedTaxIncluded": true
+          },
+          "code": "KGM"
+        },
+        "quantity": 5.0,
+        "deliveryDate": {
+          "startDate": "2023-01-03T00:00:00+02:00",
+          "endDate": "2023-01-06T00:00:00+02:00"
+        }
+      }
+    ],
+    "lots": [
+      {
+        "title": "Лот №1",
+        "description": "Опис Лот №1",
+        "status": "active",
+        "id": "31693e70b6c241d98c896077eaea1e71",
+        "date": "2023-01-01T00:00:00+02:00",
+        "value": {
+          "amount": 500.0,
+          "currency": "UAH",
+          "valueAddedTaxIncluded": true
+        },
+        "minimalStep": {
+          "amount": 5.0,
+          "currency": "UAH",
+          "valueAddedTaxIncluded": true
+        }
+      }
+    ],
+    "milestones": [
+      {
+        "id": "d40e5e789b2e4999bee3c87879f74730",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 5,
+          "type": "banking"
+        },
+        "sequenceNumber": 0,
+        "relatedLot": "31693e70b6c241d98c896077eaea1e71"
+      },
+      {
+        "id": "be29ce19cb374870a781d5fb3c8a54b6",
+        "title": "anotherEvent",
+        "description": "Підозрілий опис",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 7,
+          "type": "calendar"
+        },
+        "sequenceNumber": 1,
+        "relatedLot": "31693e70b6c241d98c896077eaea1e71"
+      }
+    ],
+    "procurementMethodType": "belowThreshold",
+    "procuringEntity": {
+      "name": "Державне управління справами",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00037256",
+        "uri": "http://www.dus.gov.ua/"
+      },
+      "address": {
+        "streetAddress": "вул. Банкова, 11, корпус 1",
+        "locality": "м. Київ",
+        "region": "м. Київ",
+        "postalCode": "01220",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "telephone": "+0440000000",
+        "name": "Державне управління справами"
+      },
+      "kind": "general"
+    },
+    "enquiryPeriod": {
+      "startDate": "2023-01-01T00:00:00+02:00",
+      "clarificationsUntil": "2023-01-09T00:00:00+02:00",
+      "endDate": "2023-01-08T00:00:00+02:00"
+    },
+    "id": "19cdc6eddc144c4fb58dca333d3fefd1"
+  },
+  "config": {
+    "hasAuction": true
+  }
+}
+

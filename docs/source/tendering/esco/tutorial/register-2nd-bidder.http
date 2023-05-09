@@ -1,0 +1,143 @@
+POST /api/2.5/tenders/28db6af763c74fceaedc98e147fed6cb/bids HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1397
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "address": {
+          "countryName": "Україна",
+          "locality": "м. Львів",
+          "postalCode": "79013",
+          "region": "Львівська область",
+          "streetAddress": "вул. Островського, 34"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "name": "Андрій Олексюк",
+          "telephone": "+380322916930"
+        },
+        "identifier": {
+          "scheme": "UA-EDR",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "id": "00137226",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "name": "ДКП «Книга»",
+        "scale": "sme"
+      }
+    ],
+    "value": {
+      "annualCostsReduction": [
+        400,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900
+      ],
+      "yearlyPaymentsPercentage": 0.85,
+      "contractDuration": {
+        "years": 12,
+        "days": 200
+      }
+    },
+    "selfQualified": true,
+    "status": "draft"
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/28db6af763c74fceaedc98e147fed6cb/bids/921e8a45579a41ffa2ecd164f0a5c248
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "name": "ДКП «Книга»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137226",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 34",
+          "locality": "м. Львів",
+          "region": "Львівська область",
+          "postalCode": "79013",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "telephone": "+380322916930",
+          "name": "Андрій Олексюк"
+        },
+        "scale": "sme"
+      }
+    ],
+    "status": "draft",
+    "value": {
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true,
+      "yearlyPaymentsPercentage": 0.85,
+      "annualCostsReduction": [
+        400,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900,
+        900
+      ],
+      "contractDuration": {
+        "years": 12,
+        "days": 200
+      },
+      "amountPerformance": 713.59,
+      "amount": 9176.27
+    },
+    "selfQualified": true,
+    "id": "921e8a45579a41ffa2ecd164f0a5c248",
+    "date": "2023-01-01T00:00:00+02:00"
+  },
+  "access": {
+    "token": "9c92e5c8439b46b1b7719e07011614d9",
+    "transfer": "55e135e74ac94abdaeb773fa9108717b"
+  }
+}
+

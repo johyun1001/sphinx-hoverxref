@@ -1,0 +1,76 @@
+PATCH /api/2.5/tenders/06a89d3522bf4ba5902cacc12c9a8788/complaints/81c8a7fe2db540599096353fd28769bd?acc_token=23621912519546c78d258ca0457ca3a8 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 145
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tendererAction": "Умови виправлено",
+    "status": "resolved"
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "id": "81c8a7fe2db540599096353fd28769bd",
+    "complaintID": "UA-2023-01-01-000001-a.5",
+    "date": "2023-01-01T00:00:00+02:00",
+    "type": "complaint",
+    "author": {
+      "name": "ДКП «Школяр»",
+      "address": {
+        "streetAddress": "вул. Островського, 33",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21100",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "name": "Сергій Олексюк",
+        "email": "soleksuk@gmail.com",
+        "telephone": "+380432216930"
+      },
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00137256",
+        "legalName": "ДКП «Школяр»",
+        "uri": "http://www.sc.gov.ua/"
+      }
+    },
+    "title": "Недостатньо інформації",
+    "description": "Умови виставлені замовником не містять достатньо інформації, щоб заявка мала сенс.",
+    "dateSubmitted": "2023-01-01T00:00:00+02:00",
+    "tendererAction": "Умови виправлено",
+    "tendererActionDate": "2023-01-01T00:00:00+02:00",
+    "dateDecision": "2023-01-01T00:00:00+02:00",
+    "value": {
+      "amount": 2000.0,
+      "currency": "UAH"
+    },
+    "status": "resolved",
+    "acceptance": true,
+    "dateAccepted": "2023-01-01T00:00:00+02:00",
+    "reviewDate": "2023-01-01T00:00:00+02:00",
+    "reviewPlace": "Place of review",
+    "documents": [
+      {
+        "id": "7323cba7098e457ea5559a31af3ebd64",
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "ComplaintResolution.pdf",
+        "format": "application/pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/d88d09359eca46089444736125e42150?Signature=AOJvXhSL1tIQDaTegUVekr7dAkPABeF%2BZ0aPPSZ5Y5446GQkaEHNO12ICXIDvOSMxMko06SC9mLnzwFBIcdoBw%3D%3D&KeyID=a8968c46",
+        "datePublished": "2023-01-01T00:00:00+02:00",
+        "dateModified": "2023-01-01T00:00:00+02:00",
+        "author": "aboveThresholdReviewers",
+        "documentOf": "tender",
+        "language": "uk"
+      }
+    ]
+  }
+}
+

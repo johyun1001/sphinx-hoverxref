@@ -1,0 +1,60 @@
+POST /api/2.5/tenders/0babf43ffe2a4934bcbb730f93d38601/bids/0e4c0ac9fb214aec86664334f935e806/requirement_responses?acc_token=62ce299578e94246b3f2648888d1f6a7 HTTP/1.0
+Authorization: Bearer token
+Content-Length: 1551
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": [
+    {
+      "title": "Requirement response",
+      "description": "some description",
+      "requirement": {
+        "id": "4198c9413b51442eab2d779a5f23f656",
+        "title": "Фізична особа, яка є учасником процедури закупівлі, не була засуджена за злочин, учинений з корисливих мотивів (зокрема, пов'язаний з хабарництвом та відмиванням коштів), судимість з якої знято або погашено у встановленому законом порядку"
+      },
+      "evidences": [
+        {
+          "title": "Requirement response",
+          "relatedDocument": {
+            "id": "82f8566f236e42329fd7ea1aacc38cd1",
+            "title": "name.doc"
+          },
+          "type": "document"
+        }
+      ],
+      "value": "True"
+    }
+  ]
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "title": "Requirement response",
+      "description": "some description",
+      "requirement": {
+        "id": "4198c9413b51442eab2d779a5f23f656",
+        "title": "Фізична особа, яка є учасником процедури закупівлі, не була засуджена за злочин, учинений з корисливих мотивів (зокрема, пов'язаний з хабарництвом та відмиванням коштів), судимість з якої знято або погашено у встановленому законом порядку"
+      },
+      "evidences": [
+        {
+          "title": "Requirement response",
+          "type": "document",
+          "relatedDocument": {
+            "id": "82f8566f236e42329fd7ea1aacc38cd1",
+            "title": "name.doc"
+          },
+          "id": "0185f488d62d4f209ec519c7970f015d"
+        }
+      ],
+      "value": "True",
+      "id": "7bd5c5f8700d45c68825df6a8682e54a"
+    }
+  ]
+}
+

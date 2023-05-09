@@ -1,0 +1,35 @@
+POST /api/2.5/tenders/5f16f024cad74253882085d3438eb6e0/qualifications/08a71731ca1d4b4fa6cc76d96a018bee/complaints/76c9184415d946398f79ead1c869fd66/documents HTTP/1.0
+Authorization: Bearer reviewer
+Content-Length: 335
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "title": "ComplaintResolution.pdf",
+    "url": "http://public-docs-sandbox.prozorro.gov.ua/get/bf41b7dcccd54e8686f067364d4646dd?Signature=D6G7ctTNV3v5ea4rudU%2Bv1rzwV1yjxW2A0zMchNflOXDZsJQmzIEmhJZ%2Fijzj1tJI9e4lHSZ2wBFvpTTFZ41Ag%3D%3D&KeyID=a8968c46",
+    "hash": "md5:00000000000000000000000000000000",
+    "format": "application/pdf"
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/5f16f024cad74253882085d3438eb6e0/qualifications/08a71731ca1d4b4fa6cc76d96a018bee/complaints/76c9184415d946398f79ead1c869fd66/documents/9ba8f26ca60846ba8ffd48a73b312385
+
+{
+  "data": {
+    "id": "9ba8f26ca60846ba8ffd48a73b312385",
+    "hash": "md5:00000000000000000000000000000000",
+    "title": "ComplaintResolution.pdf",
+    "format": "application/pdf",
+    "url": "http://public-docs-sandbox.prozorro.gov.ua/get/bf41b7dcccd54e8686f067364d4646dd?Signature=iQ9S72x4kIW%2Fl3HpwPiqvn2eS1s1HJCku8jGvl4eUGJIcqkw1%2BYSDXq%2F%2FkmEFuwk06mlGj4fkL%2BX5TH8t7vvDg%3D%3D&KeyID=a8968c46",
+    "datePublished": "2023-01-01T00:00:01+02:00",
+    "dateModified": "2023-01-01T00:00:01+02:00",
+    "author": "aboveThresholdReviewers",
+    "documentOf": "tender",
+    "language": "uk"
+  }
+}
+

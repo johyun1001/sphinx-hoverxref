@@ -1,0 +1,32 @@
+POST /api/2.5/plans/2c376a06cbf7476b8c229e6955bd8194/milestones/15a9ab37fec7476aa9ef10890b9b2f4a/documents?acc_token=e7245cb4e7ef4e5aa4252c7e90f07af2 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 318
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "title": "Notice.pdf",
+    "url": "http://public-docs-sandbox.prozorro.gov.ua/get/e02eb47c177f4e078fd10eb781a99616?Signature=psSyxQ3Vn14knOgHhFLe6TVEXj7Yi87lBPBrVkLSxaWa6sEJGmis1n79SzYZFPntiZ21NiGzXWdQPrQkdDEgBw%3D%3D&KeyID=a8968c46",
+    "hash": "md5:00000000000000000000000000000000",
+    "format": "application/pdf"
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/plans/2c376a06cbf7476b8c229e6955bd8194/milestones/15a9ab37fec7476aa9ef10890b9b2f4a/documents/a23d42fa7c964ecba471e1bcb60acc46
+
+{
+  "data": {
+    "id": "a23d42fa7c964ecba471e1bcb60acc46",
+    "hash": "md5:00000000000000000000000000000000",
+    "title": "Notice.pdf",
+    "format": "application/pdf",
+    "url": "http://public-docs-sandbox.prozorro.gov.ua/get/e02eb47c177f4e078fd10eb781a99616?Signature=rN9%2BwQqp%2FjcIsh194eH4myfxHp7SzO3wXo9uAwzsF8ktudixiljJfdi7VP8qVHaRw4IhD6zi%2BmVMWZpLDOO0AA%3D%3D&KeyID=a8968c46",
+    "datePublished": "2023-01-01T00:00:10+02:00",
+    "dateModified": "2023-01-01T00:00:10+02:00"
+  }
+}
+

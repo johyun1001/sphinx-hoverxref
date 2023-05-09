@@ -1,0 +1,77 @@
+PATCH /api/2.5/tenders/f8573404c1ff4e8bac25fc817a2b68c0/awards/58b618d74671419ab1d4efc881a17538?acc_token=b1e5d31cae12404789b524b2c946715f HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 30
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "status": "active"
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "id": "58b618d74671419ab1d4efc881a17538",
+    "status": "active",
+    "date": "2023-01-01T00:00:00+02:00",
+    "documents": [
+      {
+        "id": "0722227979de4c81a08e7b4b5fe18699",
+        "datePublished": "2023-01-01T00:00:00+02:00",
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "award_first_document.doc",
+        "format": "application/msword",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/a150b81d16504ae88167cb5c3cec719f?Signature=VyqNcmitdo%2BX1ROzZI%2BCiQeLLKhcAI6HyxGzEY%2B8MLH1k%2FV6%2BGyLywy3C8rwBiRTWU2cJK8Csm4tIv7OkwMvCA%3D%3D&KeyID=a8968c46",
+        "documentOf": "tender",
+        "dateModified": "2023-01-01T00:00:00+02:00",
+        "author": "tender_owner"
+      },
+      {
+        "id": "a043727d4e1e4c9aa879acb67486ff2e",
+        "datePublished": "2023-01-01T00:00:00+02:00",
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "award_second_document.doc",
+        "format": "application/msword",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/4b2e689a0efb48e09297e8f0781145df?Signature=0K0looxslsU82Br8cYEXz%2BfTVToPT1EghT2hkvYmOjQEXndfnbeD%2BYMkV5jHBzmhrM9WTCuD%2BG5auL%2FLjydTAA%3D%3D&KeyID=a8968c46",
+        "documentOf": "tender",
+        "dateModified": "2023-01-01T00:00:00+02:00",
+        "author": "tender_owner"
+      }
+    ],
+    "suppliers": [
+      {
+        "name": "ДКП «Школяр»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137256",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 33",
+          "locality": "м. Вінниця",
+          "region": "Вінницька область",
+          "postalCode": "21100",
+          "countryName": "Україна"
+        },
+        "scale": "micro",
+        "contactPoint": {
+          "email": "soleksuk@gmail.com",
+          "telephone": "+380432216930",
+          "name": "Сергій Олексюк"
+        }
+      }
+    ],
+    "value": {
+      "amount": 475000.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    }
+  }
+}
+

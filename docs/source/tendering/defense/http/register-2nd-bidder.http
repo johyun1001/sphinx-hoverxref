@@ -1,0 +1,88 @@
+POST /api/2.5/tenders/3cf3333f00394e93bc3caaea00cbe9e2/bids HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1202
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "address": {
+          "countryName": "Україна",
+          "locality": "м. Львів",
+          "postalCode": "79013",
+          "region": "Львівська область",
+          "streetAddress": "вул. Островського, 34"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "name": "Андрій Олексюк",
+          "telephone": "+380322916930"
+        },
+        "identifier": {
+          "scheme": "UA-EDR",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "id": "00137226",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "name": "ДКП «Книга»",
+        "scale": "sme"
+      }
+    ],
+    "value": {
+      "amount": 499
+    },
+    "selfQualified": true,
+    "selfEligible": true
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/3cf3333f00394e93bc3caaea00cbe9e2/bids/63588b9454ad4de4aa8309083114c3c6
+
+{
+  "data": {
+    "value": {
+      "amount": 499.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "tenderers": [
+      {
+        "name": "ДКП «Книга»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137226",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 34",
+          "locality": "м. Львів",
+          "region": "Львівська область",
+          "postalCode": "79013",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "telephone": "+380322916930",
+          "name": "Андрій Олексюк"
+        },
+        "scale": "sme"
+      }
+    ],
+    "status": "draft",
+    "selfEligible": true,
+    "selfQualified": true,
+    "id": "63588b9454ad4de4aa8309083114c3c6",
+    "date": "2023-01-01T00:00:01+02:00"
+  },
+  "access": {
+    "token": "ca5673e3ac7c4023b8f5d9c1edc7f2b6",
+    "transfer": "3baa345c823c43889ebf0b1daa2d2e29"
+  }
+}
+

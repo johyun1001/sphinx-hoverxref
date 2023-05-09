@@ -1,0 +1,322 @@
+POST /api/2.5/tenders?opt_pretty=1 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 4368
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tenderPeriod": {
+      "endDate": "2023-01-16T00:00:00+02:00"
+    },
+    "title": "футляри до державних нагород",
+    "minimalStep": {
+      "currency": "UAH",
+      "amount": 5
+    },
+    "procurementMethodType": "aboveThreshold",
+    "value": {
+      "currency": "UAH",
+      "amount": 500
+    },
+    "procuringEntity": {
+      "kind": "special",
+      "address": {
+        "countryName": "Україна",
+        "locality": "м. Вінниця",
+        "postalCode": "21027",
+        "region": "Вінницька область",
+        "streetAddress": "вул. Стахурського. 22"
+      },
+      "contactPoint": {
+        "name": "Куца Світлана Валентинівна",
+        "telephone": "+380432465302",
+        "url": "http://sch10.edu.vn.ua/"
+      },
+      "identifier": {
+        "id": "21725150",
+        "legalName": "Заклад \"Загальноосвітня школа І-ІІІ ступенів № 10 Вінницької міської ради\"",
+        "scheme": "UA-EDR"
+      },
+      "name": "ЗОСШ #10 м.Вінниці"
+    },
+    "items": [
+      {
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "description": "Послуги шкільних їдалень",
+        "deliveryDate": {
+          "startDate": "2023-01-21T00:00:00+02:00",
+          "endDate": "2023-02-20T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "countryName": "Україна",
+          "postalCode": "79000",
+          "region": "м. Київ",
+          "locality": "м. Київ",
+          "streetAddress": "вул. Банкова 1"
+        },
+        "classification": {
+          "description": "Послуги з харчування у школах",
+          "id": "55523100-3",
+          "scheme": "ДК021"
+        },
+        "unit": {
+          "code": "KGM",
+          "name": "папір",
+          "value": {
+            "amount": 10
+          }
+        },
+        "quantity": 1
+      },
+      {
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "description": "Послуги шкільних їдалень",
+        "description_en": "Services in school canteens",
+        "classification": {
+          "description": "Послуги з харчування у школах",
+          "id": "55523100-3",
+          "scheme": "ДК021"
+        },
+        "deliveryDate": {
+          "startDate": "2023-01-21T00:00:00+02:00",
+          "endDate": "2023-02-20T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "countryName": "Україна",
+          "postalCode": "79000",
+          "region": "м. Київ",
+          "locality": "м. Київ",
+          "streetAddress": "вул. Банкова 1"
+        },
+        "unit": {
+          "code": "KGM",
+          "name": "кілограм",
+          "value": {
+            "amount": 6
+          }
+        },
+        "quantity": 1
+      }
+    ],
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "code": "prepayment",
+        "type": "financing",
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0,
+        "percentage": 45.55
+      },
+      {
+        "title": "deliveryOfGoods",
+        "code": "postpayment",
+        "type": "financing",
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0,
+        "percentage": 54.45
+      }
+    ],
+    "mainProcurementCategory": "services"
+  },
+  "config": {
+    "hasAuction": true
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/cb76d20a62ef4e318ecb101430b63776
+
+{
+  "data": {
+    "mainProcurementCategory": "services",
+    "title": "футляри до державних нагород",
+    "procurementMethod": "open",
+    "value": {
+      "amount": 500.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "minimalStep": {
+      "amount": 5.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0
+      },
+      {
+        "id": "9a0a73c7e00f49228dd67b72bcc34dbc",
+        "title": "deliveryOfGoods",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0
+      }
+    ],
+    "procuringEntity": {
+      "name": "ЗОСШ #10 м.Вінниці",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "21725150",
+        "legalName": "Заклад \"Загальноосвітня школа І-ІІІ ступенів № 10 Вінницької міської ради\""
+      },
+      "address": {
+        "streetAddress": "вул. Стахурського. 22",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21027",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "telephone": "+380432465302",
+        "url": "http://sch10.edu.vn.ua/",
+        "name": "Куца Світлана Валентинівна"
+      },
+      "kind": "special"
+    },
+    "status": "draft",
+    "procurementMethodType": "aboveThreshold",
+    "awardCriteria": "lowestCost",
+    "tenderPeriod": {
+      "startDate": "2023-01-01T00:00:00+02:00",
+      "endDate": "2023-01-16T00:00:00+02:00"
+    },
+    "items": [
+      {
+        "id": "43204fd932374740a40528f7712ca55e",
+        "description": "Послуги шкільних їдалень",
+        "classification": {
+          "description": "Послуги з харчування у школах",
+          "scheme": "ДК021",
+          "id": "55523100-3"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "unit": {
+          "name": "папір",
+          "value": {
+            "amount": 10.0,
+            "currency": "UAH",
+            "valueAddedTaxIncluded": true
+          },
+          "code": "KGM"
+        },
+        "quantity": 1.0,
+        "deliveryDate": {
+          "startDate": "2023-01-21T00:00:00+02:00",
+          "endDate": "2023-02-20T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      },
+      {
+        "id": "d81485ce6a9d4b6c8842d1c3c2fbae01",
+        "description": "Послуги шкільних їдалень",
+        "description_en": "Services in school canteens",
+        "classification": {
+          "description": "Послуги з харчування у школах",
+          "scheme": "ДК021",
+          "id": "55523100-3"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "unit": {
+          "name": "кілограм",
+          "value": {
+            "amount": 6.0,
+            "currency": "UAH",
+            "valueAddedTaxIncluded": true
+          },
+          "code": "KGM"
+        },
+        "quantity": 1.0,
+        "deliveryDate": {
+          "startDate": "2023-01-21T00:00:00+02:00",
+          "endDate": "2023-02-20T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      }
+    ],
+    "tenderID": "UA-2023-01-01-000001-a",
+    "complaintPeriod": {
+      "startDate": "2023-01-01T00:00:00+02:00",
+      "endDate": "2023-01-13T00:00:00+02:00"
+    },
+    "owner": "broker",
+    "date": "2023-01-01T00:00:00+02:00",
+    "submissionMethod": "electronicAuction",
+    "enquiryPeriod": {
+      "startDate": "2023-01-01T00:00:00+02:00",
+      "endDate": "2023-01-13T00:00:00+02:00",
+      "clarificationsUntil": "2023-01-16T00:00:00+02:00"
+    },
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00",
+    "id": "cb76d20a62ef4e318ecb101430b63776"
+  },
+  "config": {
+    "hasAuction": true
+  },
+  "access": {
+    "token": "ba20733189d94f8eb1f42516be4fddf3",
+    "transfer": "1f183a204b2e4cd38844387249baeee4"
+  }
+}
+

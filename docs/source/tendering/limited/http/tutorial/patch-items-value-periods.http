@@ -1,0 +1,158 @@
+PATCH /api/2.5/tenders/f8573404c1ff4e8bac25fc817a2b68c0?acc_token=b1e5d31cae12404789b524b2c946715f HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1142
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "items": [
+      {
+        "id": "459dbc30c3324f808330a3b4def58686",
+        "description": "Послуги шкільних їдалень",
+        "classification": {
+          "description": "Послуги з харчування у школах",
+          "scheme": "ДК021",
+          "id": "55523100-3"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "unit": {
+          "code": "MON",
+          "name": "month"
+        },
+        "quantity": 9,
+        "deliveryDate": {
+          "startDate": "2023-01-21T00:00:00+02:00",
+          "endDate": "2023-02-20T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      }
+    ]
+  }
+}
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "title_en": "Services in school canteens",
+    "title_ru": "Услуги школьных столовых",
+    "description_en": "Services in school canteens",
+    "description_ru": "Услуги школьных столовых",
+    "date": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00",
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "tenderID": "UA-2023-01-01-000001-a",
+    "owner": "broker",
+    "title": "Послуги шкільних їдалень",
+    "mainProcurementCategory": "services",
+    "procurementMethodType": "reporting",
+    "procuringEntity": {
+      "name": "ЗОСШ #10 м.Вінниці",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "21725150",
+        "legalName": "Заклад \"Загальноосвітня школа І-ІІІ ступенів № 10 Вінницької міської ради\""
+      },
+      "address": {
+        "streetAddress": "вул. Стахурського. 22",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21027",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "telephone": "+380432465302",
+        "url": "http://sch10.edu.vn.ua/",
+        "name": "Куца Світлана Валентинівна"
+      },
+      "kind": "special"
+    },
+    "items": [
+      {
+        "id": "459dbc30c3324f808330a3b4def58686",
+        "description": "Послуги шкільних їдалень",
+        "classification": {
+          "description": "Послуги з харчування у школах",
+          "scheme": "ДК021",
+          "id": "55523100-3"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "unit": {
+          "name": "month",
+          "code": "MON"
+        },
+        "quantity": 9.0,
+        "deliveryDate": {
+          "startDate": "2023-01-21T00:00:00+02:00",
+          "endDate": "2023-02-20T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      }
+    ],
+    "value": {
+      "amount": 500000.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "procurementMethod": "limited",
+    "status": "active",
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0
+      },
+      {
+        "id": "f3452a23940f48cb9a2eedfb60bba9f6",
+        "title": "deliveryOfGoods",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0
+      }
+    ],
+    "id": "f8573404c1ff4e8bac25fc817a2b68c0"
+  },
+  "config": {
+    "hasAuction": false
+  }
+}
+

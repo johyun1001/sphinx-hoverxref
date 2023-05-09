@@ -1,0 +1,79 @@
+POST /api/2.5/tenders/00653c26796e413c89e22e65cd6da9cd/bids HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1173
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "address": {
+          "countryName": "Україна",
+          "locality": "м. Львів",
+          "postalCode": "79013",
+          "region": "Львівська область",
+          "streetAddress": "вул. Островського, 34"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "name": "Андрій Олексюк",
+          "telephone": "+380322916930"
+        },
+        "identifier": {
+          "scheme": "UA-EDR",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "id": "00137226",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "name": "ДКП «Книга»",
+        "scale": "sme"
+      }
+    ],
+    "selfQualified": true,
+    "status": "draft"
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/00653c26796e413c89e22e65cd6da9cd/bids/fa890d2c806e47e1873c2ded975eaebf
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "name": "ДКП «Книга»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137226",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 34",
+          "locality": "м. Львів",
+          "region": "Львівська область",
+          "postalCode": "79013",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "telephone": "+380322916930",
+          "name": "Андрій Олексюк"
+        },
+        "scale": "sme"
+      }
+    ],
+    "selfQualified": true,
+    "status": "draft",
+    "id": "fa890d2c806e47e1873c2ded975eaebf",
+    "date": "2023-01-01T00:00:00+02:00"
+  },
+  "access": {
+    "token": "dc342fd589054848a84782a8f7064f7a",
+    "transfer": "dedfea38ce4b40faab4ae4f5a76af6d0"
+  }
+}
+

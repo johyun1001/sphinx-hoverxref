@@ -1,0 +1,35 @@
+POST /api/2.5/tenders/26dac5d9cddc43f1b4178ec68bd3f601/bids/2096f1a2874b40e3bbf150c27e4824bf/eligibility_documents?acc_token=0d57c6be9b754553b15a01e3c465d471 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 333
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "title": "eligibility_doc.pdf",
+    "url": "http://public-docs-sandbox.prozorro.gov.ua/get/b3ec728698e1471aa09e389d77c8c59e?Signature=xxfefD4E2xzP6zcimMNtAF5MX98b6y0zRh1LCa1LOU6aOBm%2Bu8aHR2OsxRG%2FDcfZppAvM2tZee%2BLdMqU0O91BA%3D%3D&KeyID=a8968c46",
+    "hash": "md5:00000000000000000000000000000000",
+    "format": "application/pdf"
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/26dac5d9cddc43f1b4178ec68bd3f601/bids/2096f1a2874b40e3bbf150c27e4824bf/eligibility_documents/1058ac9d5fbe4bce95bfcfa7cddd5c45
+
+{
+  "data": {
+    "hash": "md5:00000000000000000000000000000000",
+    "title": "eligibility_doc.pdf",
+    "format": "application/pdf",
+    "url": "http://public-docs-sandbox.prozorro.gov.ua/get/b3ec728698e1471aa09e389d77c8c59e?Signature=D0Zy%2FXOL5XTaIpKsv10eyigjjpJ1DGCvEy0%2FHHe0%2F6QWXzvtIaAuRl1WqCDa%2FsfULvUfsqTB79QBi0GrVQhZDA%3D%3D&KeyID=a8968c46",
+    "documentOf": "tender",
+    "confidentiality": "public",
+    "language": "uk",
+    "id": "1058ac9d5fbe4bce95bfcfa7cddd5c45",
+    "datePublished": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00"
+  }
+}
+

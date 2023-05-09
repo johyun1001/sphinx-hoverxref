@@ -1,0 +1,231 @@
+POST /api/2.5/tenders?opt_pretty=1 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 3126
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "title": "футляри до державних нагород",
+    "title_en": "Cases with state awards",
+    "title_ru": "футляры к государственным наградам",
+    "procuringEntity": {
+      "name": "Державне управління справами",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00037256",
+        "uri": "http://www.dus.gov.ua/"
+      },
+      "address": {
+        "countryName": "Україна",
+        "postalCode": "01220",
+        "region": "м. Київ",
+        "locality": "м. Київ",
+        "streetAddress": "вул. Банкова, 11, корпус 1"
+      },
+      "contactPoint": {
+        "name": "Державне управління справами",
+        "telephone": "+0440000000"
+      },
+      "kind": "general"
+    },
+    "items": [
+      {
+        "id": "7cafcae8b551443599f87782cd56a35d",
+        "description": "футляри до державних нагород",
+        "description_en": "Cases with state awards",
+        "description_ru": "футляры к государственным наградам",
+        "classification": {
+          "scheme": "ДК021",
+          "id": "44617100-9",
+          "description": "Cartons"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "папір і картон гофровані, паперова й картонна тара"
+          }
+        ],
+        "unit": {
+          "name": "кілограм",
+          "code": "KGM",
+          "value": {
+            "amount": 6
+          }
+        },
+        "quantity": 5,
+        "relatedLot": "50fc7d0cb4e3423491c35387a046af42"
+      }
+    ],
+    "procurementMethodType": "closeFrameworkAgreementSelectionUA",
+    "mode": "test",
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "code": "prepayment",
+        "type": "financing",
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0,
+        "percentage": 45.55
+      },
+      {
+        "title": "deliveryOfGoods",
+        "code": "postpayment",
+        "type": "financing",
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0,
+        "percentage": 54.45
+      }
+    ],
+    "mainProcurementCategory": "services",
+    "agreements": [
+      {
+        "id": "53e68cfa78da42188f99f9e054e0e168"
+      }
+    ],
+    "lots": [
+      {
+        "title": "Лот №1",
+        "description": "Опис Лот №1",
+        "id": "50fc7d0cb4e3423491c35387a046af42"
+      }
+    ]
+  },
+  "config": {
+    "hasAuction": true
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/dd5002cf75a64ce6bc9d60862b662d27
+
+{
+  "data": {
+    "mainProcurementCategory": "services",
+    "title_en": "[TESTING] Cases with state awards",
+    "title_ru": "[ТЕСТИРОВАНИЕ] футляры к государственным наградам",
+    "title": "[ТЕСТУВАННЯ] футляри до державних нагород",
+    "mode": "test",
+    "procurementMethodType": "closeFrameworkAgreementSelectionUA",
+    "awardCriteria": "lowestCost",
+    "procurementMethod": "selective",
+    "procuringEntity": {
+      "name": "Державне управління справами",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "00037256",
+        "uri": "http://www.dus.gov.ua/"
+      },
+      "contactPoint": {
+        "telephone": "+0440000000",
+        "name": "Державне управління справами",
+        "availableLanguage": "uk"
+      },
+      "address": {
+        "streetAddress": "вул. Банкова, 11, корпус 1",
+        "locality": "м. Київ",
+        "region": "м. Київ",
+        "postalCode": "01220",
+        "countryName": "Україна"
+      },
+      "kind": "general"
+    },
+    "status": "draft",
+    "agreements": [
+      {
+        "id": "53e68cfa78da42188f99f9e054e0e168"
+      }
+    ],
+    "items": [
+      {
+        "id": "7cafcae8b551443599f87782cd56a35d",
+        "description": "футляри до державних нагород",
+        "description_en": "Cases with state awards",
+        "description_ru": "футляры к государственным наградам",
+        "classification": {
+          "description": "Cartons",
+          "scheme": "ДК021",
+          "id": "44617100-9"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "папір і картон гофровані, паперова й картонна тара"
+          }
+        ],
+        "quantity": 5.0,
+        "relatedLot": "50fc7d0cb4e3423491c35387a046af42",
+        "unit": {
+          "name": "кілограм",
+          "code": "KGM",
+          "value": {
+            "amount": 6.0,
+            "currency": "UAH",
+            "valueAddedTaxIncluded": true
+          }
+        }
+      }
+    ],
+    "lots": [
+      {
+        "title": "Лот №1",
+        "description": "Опис Лот №1",
+        "id": "50fc7d0cb4e3423491c35387a046af42",
+        "status": "active",
+        "date": "2023-01-01T00:00:00+02:00"
+      }
+    ],
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0
+      },
+      {
+        "id": "e3ecb4dac667456ba483498c8c348d92",
+        "title": "deliveryOfGoods",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0
+      }
+    ],
+    "tenderID": "UA-2023-01-01-000002-a",
+    "owner": "broker",
+    "date": "2023-01-01T00:00:00+02:00",
+    "submissionMethod": "electronicAuction",
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00",
+    "id": "dd5002cf75a64ce6bc9d60862b662d27"
+  },
+  "config": {
+    "hasAuction": true
+  },
+  "access": {
+    "token": "65ab2952b7c34b23bea707b8c33a7022",
+    "transfer": "a313947e69e048138630f529b090f6ba"
+  }
+}
+

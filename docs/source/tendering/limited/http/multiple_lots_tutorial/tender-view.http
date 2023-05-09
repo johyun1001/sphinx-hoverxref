@@ -1,0 +1,140 @@
+GET /api/2.5/tenders/54784c9d4ff74af1986c35990954e7e6 HTTP/1.0
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "title_en": "Services in school canteens",
+    "title_ru": "Услуги школьных столовых",
+    "description_en": "Services in school canteens",
+    "description_ru": "Услуги школьных столовых",
+    "date": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00",
+    "dateCreated": "2023-01-01T00:00:00+02:00",
+    "tenderID": "UA-2023-01-01-000001-a",
+    "owner": "broker",
+    "title": "Послуги шкільних їдалень",
+    "mainProcurementCategory": "services",
+    "procurementMethod": "limited",
+    "procuringEntity": {
+      "name": "ЗОСШ #10 м.Вінниці",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "21725150",
+        "legalName": "Заклад \"Загальноосвітня школа І-ІІІ ступенів № 10 Вінницької міської ради\""
+      },
+      "address": {
+        "streetAddress": "вул. Стахурського. 22",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21027",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "telephone": "+380432465302",
+        "url": "http://sch10.edu.vn.ua/",
+        "name": "Куца Світлана Валентинівна"
+      },
+      "kind": "special"
+    },
+    "status": "active",
+    "value": {
+      "amount": 500000.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "items": [
+      {
+        "id": "cb67762467844f0281d3dbf0910706ea",
+        "description": "Послуги шкільних їдалень",
+        "classification": {
+          "description": "Послуги з харчування у школах",
+          "scheme": "ДК021",
+          "id": "55523100-3"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "17.21.1",
+            "description": "Послуги шкільних їдалень"
+          }
+        ],
+        "unit": {
+          "name": "папір",
+          "value": {
+            "amount": 10.0,
+            "currency": "UAH",
+            "valueAddedTaxIncluded": true
+          },
+          "code": "KGM"
+        },
+        "quantity": 1.0,
+        "relatedLot": "d049e59ecd494591ab40486ee8250cc7",
+        "deliveryDate": {
+          "startDate": "2023-01-21T00:00:00+02:00",
+          "endDate": "2023-02-20T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      }
+    ],
+    "causeDescription": "оригінальний тендер не вдався двічі",
+    "causeDescription_en": "original tender has failed twice",
+    "causeDescription_ru": "оригинальный тендер не получился дважды",
+    "lots": [
+      {
+        "title": "Лот №1",
+        "description": "Опис Лот №1",
+        "status": "active",
+        "id": "d049e59ecd494591ab40486ee8250cc7",
+        "date": "2023-01-01T00:00:00+02:00",
+        "value": {
+          "amount": 500000.0,
+          "currency": "UAH",
+          "valueAddedTaxIncluded": true
+        }
+      }
+    ],
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0
+      },
+      {
+        "id": "6fd39fb212c249d1a6bb26d118f09cca",
+        "title": "deliveryOfGoods",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0
+      }
+    ],
+    "procurementMethodType": "negotiation.quick",
+    "cause": "twiceUnsuccessful",
+    "id": "54784c9d4ff74af1986c35990954e7e6"
+  },
+  "config": {
+    "hasAuction": false
+  }
+}
+

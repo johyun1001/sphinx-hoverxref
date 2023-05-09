@@ -1,0 +1,89 @@
+POST /api/2.5/tenders/0ffcd2893dee417cb36ace18bfbd7a09/bids HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 1355
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tenderers": [
+      {
+        "address": {
+          "countryName": "Україна",
+          "locality": "м. Вінниця",
+          "postalCode": "21100",
+          "region": "Вінницька область",
+          "streetAddress": "вул. Островського, 33"
+        },
+        "contactPoint": {
+          "email": "soleksuk@gmail.com",
+          "name": "Сергій Олексюк",
+          "telephone": "+380432216930"
+        },
+        "identifier": {
+          "scheme": "UA-EDR",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр»",
+          "id": "00137256",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "name": "ДКП «Школяр»",
+        "scale": "micro"
+      }
+    ],
+    "value": {
+      "amount": 500
+    },
+    "status": "draft",
+    "subcontractingDetails": "ДКП «Орфей», Україна",
+    "selfQualified": true
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/0ffcd2893dee417cb36ace18bfbd7a09/bids/3243b3e178b34c5f85fbf9e190f9f42d
+
+{
+  "data": {
+    "value": {
+      "amount": 500.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "tenderers": [
+      {
+        "name": "ДКП «Школяр»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137256",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 33",
+          "locality": "м. Вінниця",
+          "region": "Вінницька область",
+          "postalCode": "21100",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "soleksuk@gmail.com",
+          "telephone": "+380432216930",
+          "name": "Сергій Олексюк"
+        },
+        "scale": "micro"
+      }
+    ],
+    "subcontractingDetails": "ДКП «Орфей», Україна",
+    "selfQualified": true,
+    "status": "draft",
+    "id": "3243b3e178b34c5f85fbf9e190f9f42d",
+    "date": "2023-01-01T00:00:00+02:00"
+  },
+  "access": {
+    "token": "e04ba22921d64cdc8189464cbe18d160",
+    "transfer": "16a39e8499a84e40b81e5d2dde1506a9"
+  }
+}
+

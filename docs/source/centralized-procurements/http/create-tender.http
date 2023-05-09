@@ -1,0 +1,438 @@
+POST /api/2.5/tenders HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 5650
+Content-Type: application/json
+Host: lb-api-sandbox.prozorro.gov.ua
+
+{
+  "data": {
+    "tenderPeriod": {
+      "endDate": "2023-02-01T00:00:00+02:00"
+    },
+    "title": "футляри до державних нагород",
+    "minimalStep": {
+      "currency": "UAH",
+      "amount": 5
+    },
+    "procurementMethodType": "aboveThresholdUA",
+    "value": {
+      "currency": "UAH",
+      "amount": 500
+    },
+    "procuringEntity": {
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "111111",
+        "legalName": "ДП Центральний закупівельний орган №1"
+      },
+      "name": "ЦЗО №1",
+      "address": {
+        "countryName": "Україна",
+        "locality": "м. Вінниця",
+        "postalCode": "21027",
+        "region": "Вінницька область",
+        "streetAddress": "вул. Стахурського. 22"
+      },
+      "kind": "central",
+      "contactPoint": {
+        "name": "Довідкова",
+        "telephone": "+0440000000"
+      }
+    },
+    "items": [
+      {
+        "deliveryDate": {
+          "endDate": "2023-01-16T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "countryName": "Україна",
+          "postalCode": "79000",
+          "region": "м. Київ",
+          "locality": "м. Київ",
+          "streetAddress": "вул. Банкова 1"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "01.11.92",
+            "description": "Насіння гірчиці"
+          }
+        ],
+        "unit": {
+          "code": "KGM",
+          "name": "кг"
+        },
+        "classification": {
+          "scheme": "ДК021",
+          "description": "Mustard seeds",
+          "id": "03111600-8"
+        },
+        "quantity": 1000,
+        "description": "Насіння гірчиці",
+        "relatedBuyer": "3e32f23699ea4ac0b8e105e7babd2c86"
+      },
+      {
+        "deliveryDate": {
+          "endDate": "2023-01-17T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "countryName": "Україна",
+          "postalCode": "79000",
+          "region": "м. Київ",
+          "locality": "м. Київ",
+          "streetAddress": "вул. Банкова 1"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "01.11.95",
+            "description": "Насіння соняшнику"
+          }
+        ],
+        "unit": {
+          "code": "KGM",
+          "name": "кг"
+        },
+        "classification": {
+          "scheme": "ДК021",
+          "description": "Sunflower seeds",
+          "id": "03111300-5"
+        },
+        "quantity": 2000,
+        "description": "Насіння соняшнику",
+        "relatedBuyer": "3e32f23699ea4ac0b8e105e7babd2c86"
+      },
+      {
+        "deliveryDate": {
+          "endDate": "2023-01-18T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "countryName": "Україна",
+          "postalCode": "79000",
+          "region": "м. Київ",
+          "locality": "м. Київ",
+          "streetAddress": "вул. Банкова 1"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "01.11.84",
+            "description": "Насіння бавовнику"
+          }
+        ],
+        "unit": {
+          "code": "KGM",
+          "name": "кг"
+        },
+        "classification": {
+          "scheme": "ДК021",
+          "description": "Cotton seeds",
+          "id": "03111400-6"
+        },
+        "quantity": 3000,
+        "description": "Насіння бавовнику",
+        "relatedBuyer": "88c051728aae432ca2d39a0215d63fcd"
+      }
+    ],
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "code": "prepayment",
+        "type": "financing",
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0,
+        "percentage": 45.55
+      },
+      {
+        "title": "deliveryOfGoods",
+        "code": "postpayment",
+        "type": "financing",
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0,
+        "percentage": 54.45
+      }
+    ],
+    "mainProcurementCategory": "services",
+    "buyers": [
+      {
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "111983",
+          "legalName": "ДП Державне Управління Справами"
+        },
+        "name": "ДУС",
+        "address": {
+          "countryName": "Україна",
+          "postalCode": "01220",
+          "region": "м. Київ",
+          "locality": "м. Київ",
+          "streetAddress": "вул. Банкова, 11, корпус 1"
+        },
+        "kind": "general",
+        "id": "3e32f23699ea4ac0b8e105e7babd2c86"
+      },
+      {
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "222983",
+          "legalName": "ДП Державне Управління Справами"
+        },
+        "name": "ДУС",
+        "address": {
+          "countryName": "Україна",
+          "postalCode": "01220",
+          "region": "м. Київ",
+          "locality": "м. Київ",
+          "streetAddress": "вул. Банкова, 11, корпус 1"
+        },
+        "kind": "general",
+        "id": "88c051728aae432ca2d39a0215d63fcd"
+      }
+    ],
+    "status": "draft"
+  },
+  "config": {
+    "hasAuction": true
+  }
+}
+
+
+HTTP/1.0 201 Created
+Content-Type: application/json
+Location: http://lb-api-sandbox.prozorro.gov.ua/api/2.5/tenders/d1b73c4e72e244f1833086204faadff6
+
+{
+  "data": {
+    "mainProcurementCategory": "services",
+    "buyers": [
+      {
+        "id": "3e32f23699ea4ac0b8e105e7babd2c86",
+        "name": "ДУС",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "111983",
+          "legalName": "ДП Державне Управління Справами"
+        },
+        "address": {
+          "streetAddress": "вул. Банкова, 11, корпус 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "01220",
+          "countryName": "Україна"
+        },
+        "kind": "general"
+      },
+      {
+        "id": "88c051728aae432ca2d39a0215d63fcd",
+        "name": "ДУС",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "222983",
+          "legalName": "ДП Державне Управління Справами"
+        },
+        "address": {
+          "streetAddress": "вул. Банкова, 11, корпус 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "01220",
+          "countryName": "Україна"
+        },
+        "kind": "general"
+      }
+    ],
+    "title": "футляри до державних нагород",
+    "procurementMethod": "open",
+    "value": {
+      "amount": 500.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "minimalStep": {
+      "amount": 5.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "milestones": [
+      {
+        "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "signingTheContract",
+        "type": "financing",
+        "code": "prepayment",
+        "percentage": 45.55,
+        "duration": {
+          "days": 2,
+          "type": "banking"
+        },
+        "sequenceNumber": 0
+      },
+      {
+        "id": "519152a1889240fd9cf9dd576c46265c",
+        "title": "deliveryOfGoods",
+        "type": "financing",
+        "code": "postpayment",
+        "percentage": 54.45,
+        "duration": {
+          "days": 900,
+          "type": "calendar"
+        },
+        "sequenceNumber": 0
+      }
+    ],
+    "procuringEntity": {
+      "name": "ЦЗО №1",
+      "identifier": {
+        "scheme": "UA-EDR",
+        "id": "111111",
+        "legalName": "ДП Центральний закупівельний орган №1"
+      },
+      "address": {
+        "streetAddress": "вул. Стахурського. 22",
+        "locality": "м. Вінниця",
+        "region": "Вінницька область",
+        "postalCode": "21027",
+        "countryName": "Україна"
+      },
+      "contactPoint": {
+        "telephone": "+0440000000",
+        "name": "Довідкова"
+      },
+      "kind": "central"
+    },
+    "status": "draft",
+    "procurementMethodType": "aboveThresholdUA",
+    "awardCriteria": "lowestCost",
+    "tenderPeriod": {
+      "startDate": "2023-01-01T00:00:15+02:00",
+      "endDate": "2023-02-01T00:00:00+02:00"
+    },
+    "items": [
+      {
+        "id": "97735bdc93204bd7a1469064bb3e615b",
+        "description": "Насіння гірчиці",
+        "classification": {
+          "description": "Mustard seeds",
+          "scheme": "ДК021",
+          "id": "03111600-8"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "01.11.92",
+            "description": "Насіння гірчиці"
+          }
+        ],
+        "unit": {
+          "name": "кг",
+          "code": "KGM"
+        },
+        "quantity": 1000.0,
+        "relatedBuyer": "3e32f23699ea4ac0b8e105e7babd2c86",
+        "deliveryDate": {
+          "endDate": "2023-01-16T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      },
+      {
+        "id": "258306a31f6a47758d528d907f4329fe",
+        "description": "Насіння соняшнику",
+        "classification": {
+          "description": "Sunflower seeds",
+          "scheme": "ДК021",
+          "id": "03111300-5"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "01.11.95",
+            "description": "Насіння соняшнику"
+          }
+        ],
+        "unit": {
+          "name": "кг",
+          "code": "KGM"
+        },
+        "quantity": 2000.0,
+        "relatedBuyer": "3e32f23699ea4ac0b8e105e7babd2c86",
+        "deliveryDate": {
+          "endDate": "2023-01-17T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      },
+      {
+        "id": "650759050f6a43e4aa1ab880fa5f35fb",
+        "description": "Насіння бавовнику",
+        "classification": {
+          "description": "Cotton seeds",
+          "scheme": "ДК021",
+          "id": "03111400-6"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "ДКПП",
+            "id": "01.11.84",
+            "description": "Насіння бавовнику"
+          }
+        ],
+        "unit": {
+          "name": "кг",
+          "code": "KGM"
+        },
+        "quantity": 3000.0,
+        "relatedBuyer": "88c051728aae432ca2d39a0215d63fcd",
+        "deliveryDate": {
+          "endDate": "2023-01-18T00:00:00+02:00"
+        },
+        "deliveryAddress": {
+          "streetAddress": "вул. Банкова 1",
+          "locality": "м. Київ",
+          "region": "м. Київ",
+          "postalCode": "79000",
+          "countryName": "Україна"
+        }
+      }
+    ],
+    "tenderID": "UA-2023-01-01-000001-a",
+    "complaintPeriod": {
+      "startDate": "2023-01-01T00:00:15+02:00",
+      "endDate": "2023-01-28T00:00:00+02:00"
+    },
+    "owner": "broker",
+    "date": "2023-01-01T00:00:15+02:00",
+    "submissionMethod": "electronicAuction",
+    "enquiryPeriod": {
+      "startDate": "2023-01-01T00:00:15+02:00",
+      "endDate": "2023-01-22T00:00:00+02:00",
+      "clarificationsUntil": "2023-01-26T00:00:00+02:00"
+    },
+    "dateCreated": "2023-01-01T00:00:15+02:00",
+    "dateModified": "2023-01-01T00:00:15+02:00",
+    "id": "d1b73c4e72e244f1833086204faadff6"
+  },
+  "config": {
+    "hasAuction": true
+  },
+  "access": {
+    "token": "fcf76f747843442fafdd24a444a6063e",
+    "transfer": "5447b2801ac74791aba778560c183b9e"
+  }
+}
+

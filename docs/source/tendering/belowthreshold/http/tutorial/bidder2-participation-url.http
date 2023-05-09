@@ -1,0 +1,68 @@
+GET /api/2.5/tenders/f2ffdfd3a21b4081841738915486b18b/bids/7c93f54de7f8485889496ff805689a3d?acc_token=2a5c2fa6ded64c1a87722d5939bcc7fd HTTP/1.0
+Authorization: Bearer broker
+Host: public-api-sandbox.prozorro.gov.ua
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "value": {
+      "amount": 499.0,
+      "currency": "UAH",
+      "valueAddedTaxIncluded": true
+    },
+    "tenderers": [
+      {
+        "name": "ДКП «Книга»",
+        "identifier": {
+          "scheme": "UA-EDR",
+          "id": "00137226",
+          "legalName": "Державне комунальне підприємство громадського харчування «Школяр 2»",
+          "uri": "http://www.sc.gov.ua/"
+        },
+        "address": {
+          "streetAddress": "вул. Островського, 34",
+          "locality": "м. Львів",
+          "region": "Львівська область",
+          "postalCode": "79013",
+          "countryName": "Україна"
+        },
+        "contactPoint": {
+          "email": "aagt@gmail.com",
+          "telephone": "+380322916930",
+          "name": "Андрій Олексюк"
+        },
+        "scale": "sme"
+      }
+    ],
+    "status": "draft",
+    "documents": [
+      {
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "Proposal_part1.pdf",
+        "format": "application/pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/cf174abb36e944eb8ca48f1afe8eb4d2?Signature=nhY11nzZvoAKjFc3a%2FPpyp9%2BxrzoIXCWAYyrTlcJ%2FVzF6BLISq%2FmFK7mkqMFMxpbHQrYyJ%2B0DcVJExrJdvE1DA%3D%3D&KeyID=a8968c46",
+        "documentOf": "tender",
+        "id": "82a3302fb2a84cbc840262e5f4ff86a7",
+        "datePublished": "2023-01-01T00:00:01+02:00",
+        "dateModified": "2023-01-01T00:00:01+02:00"
+      },
+      {
+        "hash": "md5:00000000000000000000000000000000",
+        "title": "Proposal_part2.pdf",
+        "format": "application/pdf",
+        "url": "http://public-docs-sandbox.prozorro.gov.ua/get/fa5035ab921b4fb2888800987217ada4?Signature=9meqwsW99XL5YpmHvnJQjExFMu2X6to3Wor7h88g%2F%2FV5eb6%2FfKI%2B872U0tVny68LXkJ0GMTjT2raZPL%2BOC%2BXAQ%3D%3D&KeyID=a8968c46",
+        "documentOf": "tender",
+        "id": "8df1b1464a774b09a31c7ff0b79a2907",
+        "datePublished": "2023-01-01T00:00:01+02:00",
+        "dateModified": "2023-01-01T00:00:01+02:00"
+      }
+    ],
+    "id": "7c93f54de7f8485889496ff805689a3d",
+    "date": "2023-01-01T00:00:01+02:00",
+    "participationUrl": "http://auction-sandbox.prozorro.gov.ua/tenders/f2ffdfd3a21b4081841738915486b18b?key_for_bid=7c93f54de7f8485889496ff805689a3d"
+  }
+}
+

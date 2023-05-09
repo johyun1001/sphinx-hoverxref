@@ -1,0 +1,30 @@
+PUT /api/2.5/frameworks/19554516edc64b80ad4a2834f4505fbe/documents/d220eb62f60a4ae88103b7369be80fdb?acc_token=5f94ccea4dfb4cdebd5de69ecd449013 HTTP/1.0
+Authorization: Bearer broker
+Content-Length: 181
+Content-Type: multipart/form-data; boundary=---BOUNDARY
+Host: lb-api-sandbox.prozorro.gov.ua
+
+-----BOUNDARY
+Content-Disposition: form-data; name="file"; filename="framework_additional_docs.doc"
+Content-Type: application/msword
+
+extended additional info
+-----BOUNDARY--
+
+
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "id": "d220eb62f60a4ae88103b7369be80fdb",
+    "hash": "md5:00000000000000000000000000000000",
+    "title": "framework_additional_docs.doc",
+    "format": "application/msword",
+    "url": "http://public-docs-sandbox.prozorro.gov.ua/get/f0c1e419fc8f4a92b7a4d02d6bc44504?Signature=QwHlQqaj1YoV9Hj13rib4fRT3TA85dvzgEobHEOxSJ59%2FROoBNsLtX1wv91KhTzDuNWjbiWjfvopEEu1Cj5VAA%3D%3D&KeyID=a8968c46",
+    "datePublished": "2023-01-01T00:00:00+02:00",
+    "dateModified": "2023-01-01T00:00:00+02:00"
+  }
+}
+
