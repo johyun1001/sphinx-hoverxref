@@ -22,8 +22,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    "sphinx_inline_tabs",
-    "spinx_tabs.tabs"
+    "spinx_tabs.tabs",
     "myst_parser",
 ]
 templates_path = ["_templates"]
