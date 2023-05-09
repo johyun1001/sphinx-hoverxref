@@ -4,7 +4,7 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 🚀 Tutorials
+   :caption: About MoAI
 
    /tutorial/index
    /intro/getting-started-with-sphinx
@@ -15,7 +15,7 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 💡 Explanation
+   :caption: KT 관리자 가이드
 
    /choosing-a-site
    /integrations
@@ -27,7 +27,7 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 🪄 How-to guides
+   :caption: 
 
    Project setup and configuration </guides/setup/index>
    Build process </guides/build/index>
@@ -41,7 +41,7 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 📚 Reference
+   :caption: MOAI 자주 묻는 질문
 
    /reference/features
    /config-file/index
