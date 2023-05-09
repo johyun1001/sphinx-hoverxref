@@ -4,18 +4,17 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 🚀 Tutorials
+   :caption: About MoAI
 
    /tutorial/index
    /intro/getting-started-with-sphinx
    /intro/getting-started-with-mkdocs
    /intro/import-guide
-   /examples
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 💡 Explanation
+   :caption: HAC
 
    /choosing-a-site
    /integrations
@@ -27,7 +26,7 @@ Read the Docs: documentation simplified
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 🪄 How-to guides
+   :caption: How-to guides
 
    Project setup and configuration </guides/setup/index>
    Build process </guides/build/index>
